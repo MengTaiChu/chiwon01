@@ -1,6 +1,6 @@
 <template>
   <div class="daohan">
-    <img src="src/img/logo/dan.png" alt="" />
+    <img src="../img/logo/zh-logo.png" alt="" />
     <div class="fenlei">
       <ul>
         <li v-for="item in fenlei" :key="item">{{ item }}</li>
