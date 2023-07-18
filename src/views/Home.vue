@@ -13,12 +13,19 @@ import HomeHome from "../components/HomeHome.vue";
 </script>
 
 <style lang="less" scoped>
+//移动端
+
+//PC端
+@media screen and (min-width: 1024px) {
+  .el-main {
+    --el-main-padding: 0;
+    min-width: 12rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .el-main {
   --el-main-padding: 0;
-  // max-width: 16rem;
-  min-width: 16rem;
-  width: 100%;
-  // height: 61.8rem;
-  height: 100%;
 }
 </style>
