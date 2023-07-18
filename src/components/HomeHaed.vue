@@ -25,7 +25,7 @@ const fenlei = ref(["首页", "产品", "项目", "联系我们", "18888888888"]
     height: 0.88rem;
     display: flex;
     img {
-      height: 0.44rem;
+      height: 0.28rem;
     }
   }
 }
