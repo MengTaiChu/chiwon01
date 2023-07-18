@@ -19,8 +19,8 @@ const fenlei = ref(["首页", "产品", "项目", "联系我们", "18888888888"]
   display: flex;
   // background-color: rgba(255, 0, 0, 0.315);
   height: 0.88rem;
-  width: 100%;
-  margin-left: 0.8rem;
+  // width: 100%;
+  // margin-left: 0.8rem;
   .fenlei {
     margin-left: 0.8rem;
     width: 100%;

@@ -1,84 +1,73 @@
 <template>
-  <div class="it1">
-    <el-carousel trigger="click" height="7.8rem" arrow="always">
-      <el-carousel-item v-for="item in it1" :key="item" style="height: 7.8rem">
-        <img :src="item.src" :alt="item.alt" />
-      </el-carousel-item>
-    </el-carousel>
-  </div>
+  <div class="it">
+    <div class="it1">
+      <el-carousel trigger="click" height="7.8rem" arrow="always">
+        <el-carousel-item
+          v-for="item in it1"
+          :key="item"
+          style="height: 7.8rem"
+        >
+          <img :src="item.src" :alt="item.alt" />
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
-  <div class="it2">
-    <div class="jieshao">
-      <div class="bg" v-for="item in it2" :key="item">
-        <div class="nr">
-          <div class="tu">
-            <img :src="item.src" />
-          </div>
-          <div class="zi">
-            <h5>{{ item.h5 }}</h5>
-            <p v-for="pfItem in item.pf" :key="pfItem">{{ pfItem }}</p>
+    <div class="it2">
+      <div class="jieshao">
+        <div class="bg" v-for="item in it2" :key="item">
+          <div class="nr">
+            <div class="tu">
+              <img :src="item.src" />
+            </div>
+            <div class="zi">
+              <h5>{{ item.h5 }}</h5>
+              <p v-for="pfItem in item.pf" :key="pfItem">{{ pfItem }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="it3">
-    <div class="jishu">
-      <div class="up">
+    <div class="it3">
+      <div class="jishu">
+        <div class="up">
+          <div class="biaoti">
+            <h1>技术支持</h1>
+          </div>
+        </div>
+        <div class="down">
+          <div class="nr" v-for="item in it3" :key="item">
+            <div class="tu">
+              <img :src="item.src" />
+            </div>
+            <div class="zi">
+              <h5>{{ item.h5 }}</h5>
+              <p v-for="pfItem in item.pf" :key="pfItem">{{ pfItem }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="it4">
+      <div class="daiding">
         <div class="biaoti">
           <h1>技术支持</h1>
         </div>
-      </div>
-      <div class="down">
-        <div class="nr" v-for="item in it3" :key="item">
-          <div class="tu">
-            <img :src="item.src" />
-          </div>
-          <div class="zi">
-            <h5>{{ item.h5 }}</h5>
-            <p v-for="pfItem in item.pf" :key="pfItem">{{ pfItem }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="it4">
-    <div class="daiding">
-      <div class="biaoti">
-        <h1>技术支持</h1>
-      </div>
-
-      <div class="bg">
-        <div class="nr">
-          <div class="left">
-            <img
-              src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIV2QSROD3YVZFYAQKHUKBMQKRM%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoiN25oUVJ5SUh3QmRPUTFVL0J0dlhwTGVpYTF1NDRlRUs5TDBQM1VOYUxhaz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2Ex7CZ2H6T3HVD4yoEUTuDbLtC%5FJAZ1wcnUF1fz8VAzR0%26version%3DPublished&cb=63824918465&encodeFailures=1&width=197&height=196"
-              alt=""
-            />
-          </div>
-          <div class="right">
-            <h5>工业机器人</h5>
-            <p>
-              提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。
-            </p>
-            <el-button
-              class="chakan"
-              color="rgb(42,123,237,0.75)"
-              :dark="isDark"
-              :round="true"
-              >查看更多</el-button
-            >
-          </div>
-        </div>
-        <div class="nr">
-          <div class="left">
-            <h5>工业机器人</h5>
-            <p>
-              提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。
-            </p>
-            <p style="display: flex; justify-content: flex-end">
+        <div class="bg">
+          <div class="nr">
+            <div class="left">
+              <img
+                src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIV2QSROD3YVZFYAQKHUKBMQKRM%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoiN25oUVJ5SUh3QmRPUTFVL0J0dlhwTGVpYTF1NDRlRUs5TDBQM1VOYUxhaz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2Ex7CZ2H6T3HVD4yoEUTuDbLtC%5FJAZ1wcnUF1fz8VAzR0%26version%3DPublished&cb=63824918465&encodeFailures=1&width=197&height=196"
+                alt=""
+              />
+            </div>
+            <div class="right">
+              <h5>工业机器人</h5>
+              <p>
+                提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。
+              </p>
               <el-button
                 class="chakan"
                 color="rgb(42,123,237,0.75)"
@@ -86,98 +75,117 @@
                 :round="true"
                 >查看更多</el-button
               >
-            </p>
+            </div>
           </div>
-          <div class="right">
-            <img
-              src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIV2QSROD3YVZFYAQKHUKBMQKRM%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoiN25oUVJ5SUh3QmRPUTFVL0J0dlhwTGVpYTF1NDRlRUs5TDBQM1VOYUxhaz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2Ex7CZ2H6T3HVD4yoEUTuDbLtC%5FJAZ1wcnUF1fz8VAzR0%26version%3DPublished&cb=63824918465&encodeFailures=1&width=197&height=196"
-              alt=""
-            />
+          <div class="nr">
+            <div class="left">
+              <h5>工业机器人</h5>
+              <p>
+                提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。
+              </p>
+              <p style="display: flex; justify-content: flex-end">
+                <el-button
+                  class="chakan"
+                  color="rgb(42,123,237,0.75)"
+                  :dark="isDark"
+                  :round="true"
+                  >查看更多</el-button
+                >
+              </p>
+            </div>
+            <div class="right">
+              <img
+                src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIV2QSROD3YVZFYAQKHUKBMQKRM%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoiN25oUVJ5SUh3QmRPUTFVL0J0dlhwTGVpYTF1NDRlRUs5TDBQM1VOYUxhaz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2Ex7CZ2H6T3HVD4yoEUTuDbLtC%5FJAZ1wcnUF1fz8VAzR0%26version%3DPublished&cb=63824918465&encodeFailures=1&width=197&height=196"
+                alt=""
+              />
+            </div>
           </div>
-        </div>
-        <div class="nr">
-          <div class="left">
-            <img
-              src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIV2QSROD3YVZFYAQKHUKBMQKRM%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoiN25oUVJ5SUh3QmRPUTFVL0J0dlhwTGVpYTF1NDRlRUs5TDBQM1VOYUxhaz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2Ex7CZ2H6T3HVD4yoEUTuDbLtC%5FJAZ1wcnUF1fz8VAzR0%26version%3DPublished&cb=63824918465&encodeFailures=1&width=197&height=196"
-              alt=""
-            />
-          </div>
-          <div class="right">
-            <h5>工业机器人</h5>
-            <p>
-              提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。
-            </p>
-            <el-button
-              class="chakan"
-              color="rgb(42,123,237,0.75)"
-              :dark="isDark"
-              :round="true"
-              >查看更多</el-button
-            >
+          <div class="nr">
+            <div class="left">
+              <img
+                src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIV2QSROD3YVZFYAQKHUKBMQKRM%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoiN25oUVJ5SUh3QmRPUTFVL0J0dlhwTGVpYTF1NDRlRUs5TDBQM1VOYUxhaz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2Ex7CZ2H6T3HVD4yoEUTuDbLtC%5FJAZ1wcnUF1fz8VAzR0%26version%3DPublished&cb=63824918465&encodeFailures=1&width=197&height=196"
+                alt=""
+              />
+            </div>
+            <div class="right">
+              <h5>工业机器人</h5>
+              <p>
+                提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。
+              </p>
+              <el-button
+                class="chakan"
+                color="rgb(42,123,237,0.75)"
+                :dark="isDark"
+                :round="true"
+                >查看更多</el-button
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="it5">
-    <div class="daiding">
-      <div class="biaoti">
-        <h1>技术支持</h1>
-      </div>
-      <div class="nr">
-        <div v-for="item in kh" :key="item" class="khG">
-          <img :src="item.src" :alt="item.alt" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="it6">
-    <div class="daiding">
+    <div class="it5">
       <div class="daiding">
         <div class="biaoti">
           <h1>技术支持</h1>
         </div>
-
-        <div class="nr">
-          <div class="lunbo">
-            <el-carousel :interval="4000" type="card" height="4.6rem">
-              <el-carousel-item v-for="item in kh" :key="item">
-                <img :src="item.src" :alt="item.alt" />
-              </el-carousel-item>
-            </el-carousel>
+        <div class="xianzhi">
+          <div class="nr">
+            <div v-for="item in kh" :key="item" class="khG">
+              <img :src="item.src" :alt="item.alt" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="it7">
-    <div class="guanyu">
-      <div class="nr" v-for="item in gy" :key="item">
-        <div>
-          <h5>{{ item.name }}</h5>
-          <p v-for="fenzItem in item.fenz" :key="fenzItem">
-            {{ fenzItem }}
-          </p>
+    <div class="it6">
+      <div class="daiding">
+        <div class="daiding">
+          <div class="biaoti">
+            <h1>技术支持</h1>
+          </div>
+
+          <div class="nr">
+            <div class="lunbo">
+              <el-carousel :interval="4000" type="card" height="4.6rem">
+                <el-carousel-item v-for="item in kh" :key="item">
+                  <img :src="item.src" :alt="item.alt" />
+                </el-carousel-item>
+              </el-carousel>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="erwm">
-        <img
-          src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSJFH2G76WHKLNHYTB3HCHQTV2BS%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoid1lSY2l0RVdVTmo5NUtNKzNtcy80K29TUlBxc1BnT1kySU1WV0dXS3dGVT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2EdwBgfofNCHWYL4dbs89ujD1Sojrv7umo7jCUvMEQddI%26version%3DPublished&cb=63825175619&encodeFailures=1&width=468&height=470"
-          alt="tuyi"
-        />
-        <p>扫码添加</p>
+    </div>
+
+    <div class="it7">
+      <div class="guanyu">
+        <div class="nr" v-for="item in gy" :key="item">
+          <div>
+            <h5>{{ item.name }}</h5>
+            <p v-for="fenzItem in item.fenz" :key="fenzItem">
+              {{ fenzItem }}
+            </p>
+          </div>
+        </div>
+        <div class="erwm">
+          <img
+            src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSJFH2G76WHKLNHYTB3HCHQTV2BS%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5NjM4NDAwIiwiZXhwIjoiMTY4OTY2MDAwMCIsImVuZHBvaW50dXJsIjoid1lSY2l0RVdVTmo5NUtNKzNtcy80K29TUlBxc1BnT1kySU1WV0dXS3dGVT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI1Mi4xOTIuNzkuMjUyIn0%2EdwBgfofNCHWYL4dbs89ujD1Sojrv7umo7jCUvMEQddI%26version%3DPublished&cb=63825175619&encodeFailures=1&width=468&height=470"
+            alt="tuyi"
+          />
+          <p>扫码添加</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="it8">
-    <div class="dizhi">
-      <p>备案信息：xxxxxxxxxxxxxxxxxx</p>
-      <p>公司地址：xxxxxxxxxxxxxxxxxx</p>
-      <p>联系方式：xxxxxxxxxxxxxxxxxx</p>
+    <div class="it8">
+      <div class="dizhi">
+        <p>备案信息：xxxxxxxxxxxxxxxxxx</p>
+        <p>公司地址：xxxxxxxxxxxxxxxxxx</p>
+        <p>联系方式：xxxxxxxxxxxxxxxxxx</p>
+      </div>
     </div>
   </div>
 </template>
@@ -439,18 +447,23 @@ const gy = ref([
         margin-bottom: 0.8rem;
       }
     }
-    .nr {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.1rem;
-      margin-left: 1.8rem;
-      margin-right: 1.8rem;
-      .khG {
-        width: 4rem;
-        height: 2rem;
-        img {
-          width: 100%;
-          height: 100%;
+
+    .xianzhi {
+      display: flex;
+      justify-content: center;
+      .nr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.1rem;
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
+        .khG {
+          width: 4rem;
+          height: 2rem;
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -478,11 +491,14 @@ const gy = ref([
       height: 12rem;
       .nr {
         display: flex;
+        justify-content: center;
       }
       .nr:nth-child(odd) {
         height: 4rem;
         width: 100%;
         background: url(https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSMBWGUXJPKIJFCILTBOL4MI4EXB%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5MzI1MjAwIiwiZXhwIjoiMTY4OTM0NjgwMCIsImVuZHBvaW50dXJsIjoiYWxTaFJURjNjRlNOMnU3cGxFYks0YVFEcWhJRHIwczdVN3FzUmw4V05uRT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiIzNS44OC4xMzYuMTc0In0%2Eq0ElY6eFXRo1JL2awyC3%5F35jJRtV47UMOQmbPLMnd%5F0%26version%3DPublished&cb=63824923366&encodeFailures=1&width=1920&height=872);
+        background-size: cover;
+
         .left {
           width: 6rem;
           height: 100%;
@@ -522,6 +538,8 @@ const gy = ref([
         height: 4rem;
         width: 100%;
         background: url(https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSPDEZNI7FXWDNEKI7XGQJJVQPUU%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5MzI1MjAwIiwiZXhwIjoiMTY4OTM0NjgwMCIsImVuZHBvaW50dXJsIjoiUVBVdlhQVDJtWCtRUUpORlN5T3poS1dlNFRWVW9nOWEvMkVudmdVNDBiND0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiIzNS44OC4xMzYuMTc0In0%2EYRplfq5oVbDdzV7mZjRHk%5FoAsY4IGAByifki9uzpv3g%26version%3DPublished&cb=63824923366&encodeFailures=1&width=1920&height=872);
+        background-size: cover;
+
         .right {
           width: 6rem;
           height: 100%;
@@ -567,6 +585,7 @@ const gy = ref([
     width: 100%;
     height: 4.8rem;
     background: url(https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSIOCKT37ESN7FEIMGY4LS7S5OUY%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5MzE0NDAwIiwiZXhwIjoiMTY4OTMzNjAwMCIsImVuZHBvaW50dXJsIjoiOVIyalZOak5FVk9BdTIrYS9iOEhjV3FvSmEreHVVRG1McG9VUlhZbW5Ldz0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI0My4yMDEuNTUuMTQ0In0%2E01Ndu47reETky5QcKEKkc2A7Y%2Dno5SlYYOPl8W3FHuc%26version%3DPublished&cb=63824920778&encodeFailures=1&width=1920&height=872);
+    background-size: cover;
     .biaoti {
       width: 100%;
       height: 2.8rem;
