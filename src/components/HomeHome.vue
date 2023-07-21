@@ -440,7 +440,7 @@ const gy = ref([
       width: 90%;
       p {
         color: #fff;
-        font-size: 0.04rem;
+        font-size: 0.12rem;
         padding-top: 0.08rem;
         padding-bottom: 0.08rem;
       }
