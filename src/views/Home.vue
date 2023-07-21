@@ -15,12 +15,7 @@ import HomeHome from "../components/HomeHome.vue";
 <style lang="less" scoped>
 //移动端
 @media screen and (max-width: 1023px) {
-  // .el-main {
-  //   --el-main-padding: 0;
-  //   max-width: 7.2rem;
-  //   width: 100%;
-  //   height: 100%;
-  // }
+
 }
 
 //PC端

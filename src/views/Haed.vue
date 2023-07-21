@@ -12,7 +12,7 @@ import HomeHaed from "../components/HomeHaed.vue";
 //移动
 @media screen and(max-width:1023px) {
   .head {
-    height: 0.88rem;
+    height: 0.44rem;
     width: 100%;
     display: flex;
     align-items: flex-start;
