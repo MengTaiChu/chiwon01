@@ -431,11 +431,13 @@ const gy = ref([
     justify-content: center;
     align-items: center;
     .dizhi {
-      display: flex;
+      // display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 80%;
+      width: 90%;
       p {
         color: #fff;
         font-size: 0.04rem;
