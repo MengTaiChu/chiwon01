@@ -1,0 +1,16 @@
+{
+  "RECORDS": [
+    {
+      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/zh-logo.png?raw=true",
+      "alt": "image1"
+    },
+    {
+      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/5.jpg?raw=true",
+      "alt": "image2"
+    },
+    {
+      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/6.jpg?raw=true",
+      "alt": "image3"
+    }
+  ]
+}

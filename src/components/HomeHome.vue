@@ -183,7 +183,7 @@
       </div>
     </div>
 
-    <div class="it7">
+    <!-- <div class="it7">
       <div class="guanyu">
         <div class="nr" v-for="item in gy" :key="item">
           <div>
@@ -219,7 +219,7 @@
         <p>公司地址：xxxxxxxxxxxxxxxxxx</p>
         <p>联系方式：xxxxxxxxxxxxxxxxxx</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
