@@ -620,7 +620,7 @@ const gy = ref([
           .down {
             width: 80%;
             .uh5 {
-              width: 50%;
+              width: 1.6rem;
               h5 {
                 padding-left: 0.12rem;
                 padding-right: 0.12rem;
@@ -750,8 +750,8 @@ const gy = ref([
           width: 100%;
           height: 100%;
           display: flex;
-          // justify-content: center;
           align-items: center;
+          justify-content: center;
           .zi {
             height: 1.2rem;
             display: flex;
