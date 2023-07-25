@@ -1,15 +1,18 @@
 {
   "RECORDS": [
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/zh-logo.png?raw=true",
+      "id": 1,
+      "src": "src/img/logo/zh-logo.png",
       "alt": "image1"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/5.jpg?raw=true",
+      "id": 2,
+      "src": "src/img/linshi/5.jpg",
       "alt": "image2"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/6.jpg?raw=true",
+      "id": 3,
+      "src": "src/img/linshi/6.jpg",
       "alt": "image3"
     }
   ]

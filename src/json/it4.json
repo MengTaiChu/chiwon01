@@ -1,17 +1,20 @@
 {
   "RECORDS": [
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+      "id": 1,
+      "src": "src/img/logo/logo.png",
       "h5": "工业机器人",
       "zf": "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+      "id": 2,
+      "src": "src/img/logo/logo.png",
       "h5": "工业机器人",
       "zf": "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+      "id": 3,
+      "src": "src/img/logo/logo.png",
       "h5": "工业机器人",
       "zf": "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。"
     }

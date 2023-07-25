@@ -22,7 +22,7 @@
         </div>
         <div class="erwm">
           <img
-            src="https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/8.jpg?raw=true"
+            src="src/img/linshi/8.jpg"
             alt="tuyi"
           />
           <p>扫码添加</p>

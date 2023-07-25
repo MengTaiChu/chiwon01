@@ -1,75 +1,93 @@
 {
   "RECORDS": [
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 1,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i1"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 2,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i2"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 3,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i3"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 4,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i4"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 5,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i5"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 6,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i6"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 7,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i7"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 8,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i8"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 9,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i9"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 10,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i1"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 11,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i2"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 12,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i3"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 13,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i4"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 14,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i5"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 15,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i6"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 16,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i7"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 17,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i8"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 18,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i9"
     }
   ]

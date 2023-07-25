@@ -182,44 +182,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="it7">
-      <div class="guanyu">
-        <div class="nr" v-for="item in gy" :key="item">
-          <div>
-            <h5>{{ item.name }}</h5>
-            <p v-for="fenzItem in item.fenz" :key="fenzItem">
-              {{ fenzItem }}
-            </p>
-          </div>
-        </div>
-        <div class="ynr">
-          <div class="yynr" v-for="item in gy" :key="item">
-            <div>
-              <h5>{{ item.name }}</h5>
-              <p v-for="fenzItem in item.fenz" :key="fenzItem">
-                {{ fenzItem }}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="erwm">
-          <img
-            src="https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/8.jpg?raw=true"
-            alt="tuyi"
-          />
-          <p>扫码添加</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="it8">
-      <div class="dizhi">
-        <p>备案信息：xxxxxxxxxxxxxxxxxx</p>
-        <p>公司地址：xxxxxxxxxxxxxxxxxx</p>
-        <p>联系方式：xxxxxxxxxxxxxxxxxx</p>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -228,32 +190,32 @@ import { ref } from "vue";
 
 const it1 = ref([
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/zh-logo.png?raw=true",
+    src: "/src/img/logo/zh-logo.png",
     alt: "image1",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/5.jpg?raw=true",
+    src: "/src/img/linshi/5.jpg",
     alt: "image2",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/6.jpg?raw=true",
+    src: "/src/img/linshi/6.jpg",
     alt: "image3",
   },
 ]);
 
 const it2 = ref([
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/7.jpg?raw=true",
+    src: "src/img/linshi/7.jpg",
     h5: "公司团队",
     pf: ["人工智能", "智能制造", "工业机器人"],
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/7.jpg?raw=true",
+    src: "src/img/linshi/7.jpg",
     h5: "公司团队",
     pf: ["人工智能", "智能制造", "工业机器人"],
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/7.jpg?raw=true",
+    src: "src/img/linshi/7.jpg",
     h5: "公司团队",
     pf: ["人工智能", "智能制造", "工业机器人"],
   },
@@ -261,17 +223,17 @@ const it2 = ref([
 
 const it3 = ref([
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+    src: "src/img/logo/logo.png",
     h5: "公司团队",
     pf: ["人工智能", "智能制造、工业机器人", "工业机器人"],
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+    src: "src/img/logo/logo.png",
     h5: "公司团队",
     pf: ["人工智能", "智能制造、工业机器人", "工业机器人"],
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+    src: "src/img/logo/logo.png",
     h5: "公司团队",
     pf: ["人工智能", "智能制造、工业机器人", "工业机器人"],
   },
@@ -279,17 +241,17 @@ const it3 = ref([
 
 const it4 = ref([
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+    src: "src/img/logo/logo.png",
     h5: "工业机器人",
     zf: "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+    src: "src/img/logo/logo.png",
     h5: "工业机器人",
     zf: "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/logo/dan.png?raw=true",
+    src: "src/img/logo/logo.png",
     h5: "工业机器人",
     zf: "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。",
   },
@@ -297,102 +259,102 @@ const it4 = ref([
 
 const it6 = ref([
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i1",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i2",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i3",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i4",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i5",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i6",
   },
 ]);
 
 const kh = ref([
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i1",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i2",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i3",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i4",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i5",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i6",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i7",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i8",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i9",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i1",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i2",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i3",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i4",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i5",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i6",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i7",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+    src: "src/img/linshi/2.jpg",
     alt: "i8",
   },
   {
-    src: "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+    src: "src/img/linshi/1.jpg",
     alt: "i9",
   },
 ]);
@@ -422,80 +384,7 @@ const gy = ref([
 
 <style lang="less" scoped>
 //移动
-@media screen and (max-width: 1023px) {
-  .it8 {
-    height: 100%;
-    background-color: rgb(83, 127, 192, 0.82);
-    border-top: 0.01rem solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .dizhi {
-      // display: flex;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 90%;
-      p {
-        color: #fff;
-        font-size: 0.12rem;
-        padding-top: 0.08rem;
-        padding-bottom: 0.08rem;
-      }
-    }
-  }
-  .it7 {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(83, 127, 192, 0.82);
-    .guanyu {
-      display: flex;
-      justify-content: center;
-      .ynr {
-        .yynr {
-          div {
-            display: flex;
-
-            h5 {
-              font-size: 0.12rem;
-              color: #fff;
-            }
-            p {
-              font-size: 0.12rem;
-              color: #e9e9e9;
-              margin-left: 0.12rem;
-            }
-          }
-        }
-      }
-
-      .erwm {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0.2rem;
-        img {
-          width: 0.48rem;
-          height: 0.48rem;
-          // margin-bottom: 0.14rem;
-        }
-
-        p {
-          font-size: 0.12rem;
-          color: #fff;
-          // margin-top: 0.14rem;
-        }
-      }
-      .nr {
-        display: none;
-      }
-    }
-  }
+@media screen and (max-width: 792px) {
   .it6 {
     width: 100%;
     height: 100%;
@@ -503,14 +392,14 @@ const gy = ref([
       // height: 9rem;
       height: 100%;
       width: 100%;
-      background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/bg2.png?raw=true);
+      background: url(src/img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 0.88rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/4.jpg?raw=true);
+        background: url(src/img/linshi/4.jpg);
         background-size: cover;
         h1 {
           font-size: 0.24rem;
@@ -541,14 +430,14 @@ const gy = ref([
       // height: 9rem;
       height: 100%;
       width: 100%;
-      background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/bg2.png?raw=true);
+      background: url(src/img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 0.88rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/4.jpg?raw=true);
+        background: url(src/img/linshi/4.jpg);
         background-size: cover;
         h1 {
           font-size: 0.24rem;
@@ -595,7 +484,7 @@ const gy = ref([
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/4.jpg?raw=true);
+        background: url(src/img/linshi/4.jpg);
         background-size: cover;
         h1 {
           font-size: 0.24rem;
@@ -659,7 +548,7 @@ const gy = ref([
       .up {
         width: 100%;
         height: 0.88rem;
-        background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/4.jpg?raw=true);
+        background: url(src/img/linshi/4.jpg);
         background-size: cover;
         margin-bottom: 0.08rem;
         .biaoti {
@@ -668,7 +557,7 @@ const gy = ref([
           display: flex;
           justify-content: center;
           align-items: center;
-          background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/4.jpg?raw=true);
+          background: url(src/img/linshi/4.jpg);
           background-size: cover;
           h1 {
             font-size: 0.24rem;
@@ -697,7 +586,7 @@ const gy = ref([
           .zi {
             display: flex;
             align-items: center;
-            background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/left.png?raw=true);
+            background: url(src/img/tubiao/left.png);
             background-size: cover;
             padding: 0.12rem 0 0.12rem 0.38rem;
             color: #fff;
@@ -716,7 +605,7 @@ const gy = ref([
           .tu {
             width: 100%;
             height: 1.2rem;
-            background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/3.jpg?raw=true);
+            background: url(src/img/linshi/3.jpg);
             background-size: cover;
             // border-top-left-radius: 0.12rem;
             // border-top-right-radius: 0.12rem;
@@ -741,7 +630,7 @@ const gy = ref([
       .bg {
         height: 1.6rem;
         margin-bottom: 0.12rem;
-        background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/bg.png?raw=true);
+        background: url(src/img/tubiao/bg.png);
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -812,89 +701,6 @@ const gy = ref([
 
 //pc
 @media screen and (min-width: 1024px) {
-  .it8 {
-    height: 1.2rem;
-    background-color: rgb(83, 127, 192, 0.82);
-    border-top: 0.01rem solid #000;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    .dizhi {
-      // display: flex;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-content: center;
-    }
-    p {
-      color: #fff;
-      font-size: 0.16rem;
-    }
-    .dizhi p:first-child {
-      margin-right: 0.12rem;
-    }
-    .dizhi p:last-child {
-      margin-left: 0.12rem;
-    }
-
-    .dizhi p:nth-child(2) {
-      margin-left: 0.12rem;
-      margin-right: 0.12rem;
-    }
-  }
-  .it7 {
-    width: 100%;
-    height: 4rem;
-    background-color: rgb(83, 127, 192, 0.82);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .guanyu {
-      display: flex;
-      justify-content: center;
-      .nr {
-        h5 {
-          font-size: 0.24rem;
-          color: #fff;
-        }
-        p {
-          font-size: 0.24rem;
-          color: #e9e9e9;
-          margin-top: 0.24rem;
-        }
-      }
-      .nr:first-child {
-        margin-right: 0.4rem;
-      }
-      .nr:last-child {
-        margin-left: 0.4rem;
-      }
-      .nr:not(:first-child):not(:last-child) {
-        margin-left: 0.4rem;
-        margin-right: 0.4rem;
-      }
-      .erwm {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 1.6rem;
-          height: 1.6rem;
-          margin-bottom: 0.14rem;
-        }
-
-        p {
-          font-size: 0.24rem;
-          color: #fff;
-          margin-top: 0.14rem;
-        }
-      }
-      .ynr {
-        display: none;
-      }
-    }
-  }
   .it6 {
     width: 100%;
     height: 100%;
@@ -902,7 +708,7 @@ const gy = ref([
       height: 9rem;
       // height: 100%;
       width: 100%;
-      background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/bg2.png?raw=true);
+      background: url(src/img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 2.8rem;
@@ -935,7 +741,7 @@ const gy = ref([
       // height: 9rem;
       height: 100%;
       width: 100%;
-      background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/bg2.png?raw=true);
+      background: url(src/img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 2.8rem;
@@ -1008,7 +814,7 @@ const gy = ref([
         .nr:nth-child(odd) {
           height: 4rem;
           width: 100%;
-          background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/right.png?raw=true);
+          background: url(src/img/tubiao/right.png);
           background-size: cover;
 
           .left {
@@ -1049,7 +855,7 @@ const gy = ref([
         .nr:nth-child(even) {
           height: 4rem;
           width: 100%;
-          background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/left.png?raw=true);
+          background: url(src/img/tubiao/left.png);
           background-size: cover;
 
           .right {
@@ -1099,7 +905,7 @@ const gy = ref([
     .up {
       width: 100%;
       height: 4.8rem;
-      background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/4.jpg?raw=true);
+      background: url(src/img/linshi/4.jpg);
       background-size: cover;
       .biaoti {
         width: 100%;
@@ -1170,7 +976,7 @@ const gy = ref([
       .bg {
         width: 4rem;
         height: 7.8rem;
-        background: url(https://github.com/MengTaiChu/chiwon01/blob/main/src/img/tubiao/bg.png?raw=true);
+        background: url(src/img/tubiao/bg.png);
         display: flex;
         justify-content: center;
         align-items: center;

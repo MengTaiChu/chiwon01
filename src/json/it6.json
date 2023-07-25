@@ -1,27 +1,33 @@
 {
   "RECORDS": [
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 1,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i1"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 2,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i2"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 3,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i3"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 4,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i4"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/1.jpg?raw=true",
+      "id": 5,
+      "src": "src/img/linshi/1.jpg",
       "alt": "i5"
     },
     {
-      "src": "https://github.com/MengTaiChu/chiwon01/blob/main/src/img/linshi/2.jpg?raw=true",
+      "id": 6,
+      "src": "src/img/linshi/2.jpg",
       "alt": "i6"
     }
   ]
