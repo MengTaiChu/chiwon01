@@ -384,7 +384,7 @@ const gy = ref([
 
 <style lang="less" scoped>
 //移动
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 1023px) {
   .it6 {
     width: 100%;
     height: 100%;
