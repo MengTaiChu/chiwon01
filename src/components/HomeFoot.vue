@@ -60,69 +60,95 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { getCurrentInstance, onMounted, ref } from "vue";
 import { useRouter, RouterLink } from "vue-router";
-const gy = ref([
-  {
-    name: "首页",
-    fenz: "",
-    path: "/",
-  },
-  {
-    name: "技术支持",
-    fenz: [
-      {
-        pf: "人工智能",
-        path: "/",
-      },
-      {
-        pf: "智能制造",
-        path: "/",
-      },
-      {
-        pf: "工业机器人",
-        path: "/",
-      },
-    ],
-    path: "/chanpin",
-  },
-  {
-    name: "项目成果",
-    fenz: [
-      {
-        pf: "人工智能",
-        path: "/",
-      },
-      {
-        pf: "智能制造",
-        path: "/",
-      },
-      {
-        pf: "工业机器人",
-        path: "/",
-      },
-    ],
-    path: "/xiangmu",
-  },
-  {
-    name: "联系我们",
-    fenz: [
-      {
-        pf: "人工智能",
-        path: "/",
-      },
-      {
-        pf: "智能制造",
-        path: "/",
-      },
-      {
-        pf: "工业机器人",
-        path: "/",
-      },
-    ],
-    path: "/about",
-  },
-]);
+// import axios from "axios";
+// const gy = ref([
+//   {
+//     name: "首页",
+//     fenz: "",
+//     path: "/",
+//   },
+//   {
+//     name: "技术支持",
+//     fenz: [
+//       {
+//         pf: "人工智能",
+//         path: "/",
+//       },
+//       {
+//         pf: "智能制造",
+//         path: "/",
+//       },
+//       {
+//         pf: "工业机器人",
+//         path: "/",
+//       },
+//     ],
+//     path: "/chanpin",
+//   },
+//   {
+//     name: "项目成果",
+//     fenz: [
+//       {
+//         pf: "人工智能",
+//         path: "/",
+//       },
+//       {
+//         pf: "智能制造",
+//         path: "/",
+//       },
+//       {
+//         pf: "工业机器人",
+//         path: "/",
+//       },
+//     ],
+//     path: "/xiangmu",
+//   },
+//   {
+//     name: "联系我们",
+//     fenz: [
+//       {
+//         pf: "人工智能",
+//         path: "/",
+//       },
+//       {
+//         pf: "智能制造",
+//         path: "/",
+//       },
+//       {
+//         pf: "工业机器人",
+//         path: "/",
+//       },
+//     ],
+//     path: "/about",
+//   },
+// ]);
+
+const { proxy } = getCurrentInstance();
+
+const gy = ref([]);
+
+const getGy = async () => {
+  //本地mock
+  // const res = await axios.get(
+  //   "/homeFoot/getData"
+  // );
+  //线上mock
+  // const res = await axios.get(
+  //   "https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/homeFoot/getData"
+  // );
+  // if (res.data.code == 200) {
+  //   gy.value = res.data.data.gy;
+  // }
+
+  const res = await proxy.$api.getHomeFootData();
+
+  gy.value = res.gy;
+
+  // console.log(res);
+};
+onMounted(getGy);
 
 const h5btn = (item) => {
   console.log(item);

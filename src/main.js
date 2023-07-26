@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import './api/mock.js'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -12,10 +12,12 @@ import { Swipe, SwipeItem } from 'vant'
 import 'vant/lib/index.css'
 import { Popup } from 'vant'
 import { Icon } from 'vant'
+import api from './api/api'
 
 
 const app = createApp(App)
 
+app.config.globalProperties.$api = api
 app.use(router)
 app.use(ElementPlus)
 app.use(naive)
