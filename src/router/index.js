@@ -13,10 +13,10 @@ const routes = [
     component: () => import('../views/About.vue'),
   }, {
     path: '/chanpin',
-    component: () => import('../views/Chanpin.vue'),
+    component: () => import('../views/ChanPin.vue'),
   }, {
     path: '/xiangmu',
-    component: () => import('../views/Xiangmu.vue'),
+    component: () => import('../views/XiangMu.vue'),
   },
 ]
 const router = createRouter({
