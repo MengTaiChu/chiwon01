@@ -14,12 +14,10 @@ const routes = [
   }, {
     path: '/chanpin',
     component: () => import('../views/chanpin.vue'),
-  },{
+  }, {
     path: '/xiangmu',
     component: () => import('../views/xiangmu.vue'),
   },
-
-
 ]
 const router = createRouter({
   history: createWebHashHistory(),

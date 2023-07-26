@@ -4,11 +4,23 @@
       <img src="../img/logo/zh-logo.png" alt="" class="logo" />
       <div class="fenlei">
         <ul>
-          <li v-for="item in fenlei" :key="item" @click="flItem(item)">
-            <RouterLink :to="item.path">
-              {{ item.label }}
-            </RouterLink>
+          <li>
+            <el-menu
+              mode="horizontal"
+              class="el-menu-demo"
+              @select="handleSelect"
+              style="border: 0"
+            >
+              <el-menu-item
+                v-for="item in fenlei"
+                :key="item"
+                @click="ritem(item)"
+              >
+                {{ item.label }}
+              </el-menu-item>
+            </el-menu>
           </li>
+          <li>1888888888</li>
         </ul>
       </div>
       <div class="ycaidan">
@@ -18,23 +30,20 @@
           @click="drawer = true"
           class="menubtn"
         >
-          <img
-            src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy%2Emicrosoftpersonalcontent%2Ecom%2F%5Fapi%2Fv2%2E0%2Fdrives%2Fb%21ivPsjX9Cw0WecegKstxWKaKH9O9%5FLNtPmyW2OsDLYDblVzw8rNhqQ7KGyBCL36UY%2Fitems%2F01A4UWVSN7XOUT7MJGKNGLSH2MJGBOMBGB%3Ftempauth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9%2EeyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvbXkubWljcm9zb2Z0cGVyc29uYWxjb250ZW50LmNvbUA5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJpc3MiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAiLCJuYmYiOiIxNjg5ODk3NjAwIiwiZXhwIjoiMTY4OTkxOTIwMCIsImVuZHBvaW50dXJsIjoibXBDNUpDOGk4ZTc2QlF6MC93OVIwOGsvVE1GTzgvVDREcFJGcTdQQk5yWT0iLCJlbmRwb2ludHVybExlbmd0aCI6IjE2NCIsImlzbG9vcGJhY2siOiJUcnVlIiwidmVyIjoiaGFzaGVkcHJvb2Z0b2tlbiIsInNpdGVpZCI6Ik9HUmxZMll6T0dFdE5ESTNaaTAwTldNekxUbGxOekV0WlRnd1lXSXlaR00xTmpJNSIsImFwcF9kaXNwbGF5bmFtZSI6IkNvbnN1bWVyIEFwcDogMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0IiwiYXBwaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwNDgxNzEwYTQiLCJ0aWQiOiI5MTg4MDQwZC02YzY3LTRjNWItYjExMi0zNmEzMDRiNjZkYWQiLCJ1cG4iOiIyNTQzMDU3ODQxQHFxLmNvbSIsInB1aWQiOiIwMDAzMDAwMDMyRjg2QzUwIiwiY2FjaGVrZXkiOiIwaC5mfG1lbWJlcnNoaXB8MDAwMzAwMDAzMmY4NmM1MEBsaXZlLmNvbSIsInNjcCI6ImFsbHNpdGVzLmZ1bGxjb250cm9sIiwic2lkIjoiMTI2NDU2NDE4ODM5ODQ2OTc3OTYiLCJ0dCI6IjIiLCJpcGFkZHIiOiI3NC4yMDcuMjQwLjEyIn0%2EItCPYJ8aIfONvBnm%2DanFbHXIvuG8ZRFkYtuGTP7VD2s%26version%3DPublished&cb=63824740845&encodeFailures=1&width=64&height=40"
-            alt=""
-          />
+          <img src="src\img\tubiao\caidan.png" alt="" />
         </el-button>
 
         <el-drawer v-model="drawer" :with-header="false">
           <ul class="menuUl">
-            <li v-for="item in fenlei" :key="item" @click="flItem(item)">
-              <RouterLink :to="item.path">
+            <li
+              v-for="item in fenlei"
+              :key="item"
+              :style="{ color: item.path === $route.path ? '#08d9d6' : '' }"
+            >
+              <router-link :to="item.path">
                 {{ item.label }}
-              </RouterLink>
+              </router-link>
             </li>
-            <!-- <li style="color: aquamarine">首页</li>
-            <li>产品</li>
-            <li>项目</li>
-            <li>联系我们</li> -->
           </ul>
         </el-drawer>
       </div>
@@ -43,9 +52,8 @@
 </template>
 
 <script setup >
-import { ref, onMounted } from "vue";
-import { useRouter, RouterLink } from "vue-router";
-const router = useRouter();
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 const fenlei = ref([
   {
@@ -68,22 +76,23 @@ const fenlei = ref([
     name: "about",
     label: "联系我们",
   },
-  {
-    path: "",
-    name: "",
-    label: "18888888888",
-  },
 ]);
 
 const drawer = ref(false);
 
-const flItem = (item) => {
-  router.push({
-    name: item.name,
-  });
+const ritem = (item) => {
+  console.log(item);
+  if (item.path) {
+    const currentRoute = router.currentRoute.value.path;
+    if (currentRoute === item.path) {
+      // 路由为当前时刷新页面
+      router.go(0);
+    } else {
+      router.push({ path: item.path }).catch((err) => {});
+    }
+  }
 };
-
-onMounted(() => {});
+const router = useRouter();
 </script>
 
 <style lang="less" scoped>
@@ -135,6 +144,9 @@ onMounted(() => {});
         display: flex;
         flex-direction: column;
         align-items: center;
+        .el-drawer__body {
+          padding: 0;
+        }
         li {
           margin-bottom: 0.12rem;
           font-size: 0.16rem;
@@ -150,7 +162,7 @@ onMounted(() => {});
 //PC
 @media screen and (min-width: 1024px) {
   .head {
-    height: 1.2rem;
+    height: 0.94rem;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -186,9 +198,9 @@ onMounted(() => {});
           align-items: center;
           margin-left: 0.4rem;
           margin-right: 0.4rem;
-        }
-        li:first-child {
-          color: aquamarine;
+          .el-menu-demo {
+            background-color: rgba(255, 255, 255, 0);
+          }
         }
       }
       // background-color: rgba(255, 0, 0, 0.321);

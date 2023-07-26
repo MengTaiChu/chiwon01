@@ -1,9 +1,7 @@
 <template>
-  <!-- <home /> -->
   <router-view />
 </template>
 <script setup>
-// import Home from "./views/Home.vue";
 </script>
 
 <style>
@@ -18,5 +16,9 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100px;
+}
+a {
+  text-decoration: none; /* 清除下划线 */
+  color: inherit; /* 继承父元素颜色 */
 }
 </style>

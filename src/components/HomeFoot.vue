@@ -3,28 +3,47 @@
     <div class="it7">
       <div class="guanyu">
         <div class="nr" v-for="item in gy" :key="item">
-          <div>
-            <h5>{{ item.name }}</h5>
-            <p v-for="fenzItem in item.fenz" :key="fenzItem">
-              {{ fenzItem }}
+          <div class="ftm">
+            <h5 @click="h5btn(item)">
+              <RouterLink :to="item.path">
+                {{ item.name }}
+              </RouterLink>
+              <!-- <a :href="item.path" @click="handleClick"> {{ item.name }}</a> -->
+            </h5>
+
+            <p
+              v-for="fenzItem in item.fenz"
+              :key="fenzItem"
+              @click="pbtn(fenzItem)"
+            >
+              <RouterLink :to="fenzItem.path">
+                {{ fenzItem.pf }}
+              </RouterLink>
+              <!-- <a :href="fenzItem.path" @click="handleClick">
+                {{ fenzItem.pf }}
+              </a> -->
             </p>
           </div>
         </div>
         <div class="ynr">
           <div class="yynr" v-for="item in gy" :key="item">
             <div>
-              <h5>{{ item.name }}</h5>
+              <h5>
+                <router-link :to="item.path">
+                  {{ item.name }}
+                </router-link>
+              </h5>
               <p v-for="fenzItem in item.fenz" :key="fenzItem">
-                {{ fenzItem }}
+                <router-link :to="fenzItem.path">
+                  {{ fenzItem.pf }}
+                </router-link>
               </p>
             </div>
           </div>
         </div>
+
         <div class="erwm">
-          <img
-            src="src/img/linshi/8.jpg"
-            alt="tuyi"
-          />
+          <img src="src/img/linshi/8.jpg" alt="tuyi" />
           <p>扫码添加</p>
         </div>
       </div>
@@ -42,24 +61,80 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter, RouterLink } from "vue-router";
 const gy = ref([
   {
     name: "首页",
     fenz: "",
+    path: "/",
   },
   {
     name: "技术支持",
-    fenz: ["人工智能", "智能制造", "工业机器人"],
+    fenz: [
+      {
+        pf: "人工智能",
+        path: "/",
+      },
+      {
+        pf: "智能制造",
+        path: "/",
+      },
+      {
+        pf: "工业机器人",
+        path: "/",
+      },
+    ],
+    path: "/chanpin",
   },
   {
     name: "项目成果",
-    fenz: ["人工智能", "智能制造", "工业机器人"],
+    fenz: [
+      {
+        pf: "人工智能",
+        path: "/",
+      },
+      {
+        pf: "智能制造",
+        path: "/",
+      },
+      {
+        pf: "工业机器人",
+        path: "/",
+      },
+    ],
+    path: "/xiangmu",
   },
   {
     name: "联系我们",
-    fenz: ["人工智能", "智能制造", "工业机器人"],
+    fenz: [
+      {
+        pf: "人工智能",
+        path: "/",
+      },
+      {
+        pf: "智能制造",
+        path: "/",
+      },
+      {
+        pf: "工业机器人",
+        path: "/",
+      },
+    ],
+    path: "/about",
   },
 ]);
+
+const h5btn = (item) => {
+  console.log(item);
+};
+const pbtn = (fenzItem) => {
+  console.log(fenzItem);
+};
+const handleClick = (event) => {
+  event.preventDefault();
+  // 在这里添加你想要执行的自定义操作
+};
+const router = useRouter();
 </script>
 
 <style lang="less" scoped>
@@ -158,7 +233,7 @@ const gy = ref([
       justify-content: center;
     }
     p {
-      color: #fff;
+      color: rgb(255, 255, 255);
       font-size: 0.16rem;
     }
     .dizhi p:first-child {
@@ -186,12 +261,15 @@ const gy = ref([
       .nr {
         h5 {
           font-size: 0.24rem;
-          color: #fff;
+          color: rgb(255, 255, 255);
         }
         p {
           font-size: 0.24rem;
-          color: #e9e9e9;
+          color: #e9e9e998;
           margin-top: 0.24rem;
+        }
+        p:hover {
+          color: #fff;
         }
       }
       .nr:first-child {
