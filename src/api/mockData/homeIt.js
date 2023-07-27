@@ -19,17 +19,17 @@ export default {
                 ],
                 it2: [
                     {
-                        src: "../img/linshi/7.jpg",
+                        src: "../src/img/linshi/7.jpg",
                         h5: "公司团队",
                         pf: ["人工智能", "智能制造", "工业机器人"],
                     },
                     {
-                        src: "../img/linshi/7.jpg",
+                        src: "../src/img/linshi/7.jpg",
                         h5: "公司团队",
                         pf: ["人工智能", "智能制造", "工业机器人"],
                     },
                     {
-                        src: "../img/linshi/7.jpg",
+                        src: "../src/img/linshi/7.jpg",
                         h5: "公司团队",
                         pf: ["人工智能", "智能制造", "工业机器人"],
                     },
@@ -37,135 +37,135 @@ export default {
                 ,
                 it3: [
                     {
-                        src: "../img/logo/logo.png",
+                        src: "../src/img/logo/logo.png",
                         h5: "公司团队",
                         pf: ["人工智能", "智能制造、工业机器人", "工业机器人"],
                     },
                     {
-                        src: "../img/logo/logo.png",
+                        src: "../src/img/logo/logo.png",
                         h5: "公司团队",
                         pf: ["人工智能", "智能制造、工业机器人", "工业机器人"],
                     },
                     {
-                        src: "../img/logo/logo.png",
+                        src: "../src/img/logo/logo.png",
                         h5: "公司团队",
                         pf: ["人工智能", "智能制造、工业机器人", "工业机器人"],
                     },
                 ],
                 it4: [
                     {
-                        src: "../img/logo/logo.png",
+                        src: "../src/img/logo/logo.png",
                         h5: "工业机器人",
                         zf: "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。",
                     },
                     {
-                        src: "../img/logo/logo.png",
+                        src: "../src/img/logo/logo.png",
                         h5: "工业机器人",
                         zf: "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。",
                     },
                     {
-                        src: "../img/logo/logo.png",
+                        src: "../src/img/logo/logo.png",
                         h5: "工业机器人",
                         zf: "提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。提供数字孪生相关的内容建设，配合硬件实现场景的虚实交互、远程运维等应用。",
                     },
                 ],
                 it6: [
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i1",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i2",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i3",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i4",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i5",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i6",
                     },
                 ],
                 kh: [
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i1",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i2",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i3",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i4",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i5",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i6",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i7",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i8",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i9",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i1",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i2",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i3",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i4",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i5",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i6",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i7",
                     },
                     {
-                        src: "../img/linshi/2.jpg",
+                        src: "../src/img/linshi/2.jpg",
                         alt: "i8",
                     },
                     {
-                        src: "../img/linshi/1.jpg",
+                        src: "../src/img/linshi/1.jpg",
                         alt: "i9",
                     },
                 ]
