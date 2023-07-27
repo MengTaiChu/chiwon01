@@ -14,7 +14,7 @@ export default defineConfig({
           targets: [
             {
               src: 'src/img',
-              dest: 'dist/src/img'
+              dest: 'dist/src'
             }
           ],
           hook: 'generateBundle'
