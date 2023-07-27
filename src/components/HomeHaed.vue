@@ -186,15 +186,16 @@ const router = useRouter();
   }
   .daohan {
     display: flex;
-    // background-color: rgba(255, 0, 0, 0.315);
     height: 0.88rem;
-    // width: 100%;
-    // margin-left: 0.8rem;
+    img {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
     .fenlei {
       margin-left: 0.8rem;
       width: 100%;
-      // display: flex;
-      // align-items: center;
       ul {
         display: flex;
         height: 100%;
