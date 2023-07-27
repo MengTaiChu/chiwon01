@@ -14,12 +14,12 @@ const EnvConfig = {
 
     },
     test: {
-        baseApi: '//test.future.com/api',
+        baseApi: '/api',
         mockApi: 'https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/'
 
     },
     pro: {
-        baseApi: '//future.com/api',
+        baseApi: '/api',
         mockApi: 'https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/'
 
     },
