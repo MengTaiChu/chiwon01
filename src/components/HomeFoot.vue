@@ -43,7 +43,7 @@
         </div>
 
         <div class="erwm">
-          <img src="src/img/linshi/8.jpg" alt="tuyi" />
+          <img src="../img/linshi/8.jpg" alt="tuyi" />
           <p>扫码添加</p>
         </div>
       </div>
