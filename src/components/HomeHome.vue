@@ -222,23 +222,6 @@ onMounted(getIt1);
 
 const it1 = ref([]);
 
-// const it2 = ref([
-//   {
-//     src: "src/img/linshi/7.jpg",
-//     h5: "公司团队",
-//     pf: ["人工智能", "智能制造", "工业机器人"],
-//   },
-//   {
-//     src: "src/img/linshi/7.jpg",
-//     h5: "公司团队",
-//     pf: ["人工智能", "智能制造", "工业机器人"],
-//   },
-//   {
-//     src: "src/img/linshi/7.jpg",
-//     h5: "公司团队",
-//     pf: ["人工智能", "智能制造", "工业机器人"],
-//   },
-// ]);
 
 const it2 = ref([]);
 
