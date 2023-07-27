@@ -247,14 +247,14 @@ const kh = ref([]);
       // height: 9rem;
       height: 100%;
       width: 100%;
-      background: url(../src/img/tubiao/bg2.png);
+      background: url(../img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 0.88rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(../src/img/linshi/4.jpg);
+        background: url(../img/linshi/4.jpg);
         background-size: cover;
         h1 {
           font-size: 0.24rem;
@@ -285,14 +285,14 @@ const kh = ref([]);
       // height: 9rem;
       height: 100%;
       width: 100%;
-      background: url(../src/img/tubiao/bg2.png);
+      background: url(../img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 0.88rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(../src/img/linshi/4.jpg);
+        background: url(../img/linshi/4.jpg);
         background-size: cover;
         h1 {
           font-size: 0.24rem;
@@ -339,7 +339,7 @@ const kh = ref([]);
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(../src/img/linshi/4.jpg);
+        background: url(../img/linshi/4.jpg);
         background-size: cover;
         h1 {
           font-size: 0.24rem;
@@ -403,7 +403,7 @@ const kh = ref([]);
       .up {
         width: 100%;
         height: 0.88rem;
-        background: url(../src/img/linshi/4.jpg);
+        background: url(../img/linshi/4.jpg);
         background-size: cover;
         margin-bottom: 0.08rem;
         .biaoti {
@@ -412,7 +412,7 @@ const kh = ref([]);
           display: flex;
           justify-content: center;
           align-items: center;
-          background: url(../src/img/linshi/4.jpg);
+          background: url(../img/linshi/4.jpg);
           background-size: cover;
           h1 {
             font-size: 0.24rem;
@@ -441,7 +441,7 @@ const kh = ref([]);
           .zi {
             display: flex;
             align-items: center;
-            background: url(../src/img/tubiao/left.png);
+            background: url(../img/tubiao/left.png);
             background-size: cover;
             padding: 0.12rem 0 0.12rem 0.38rem;
             color: #fff;
@@ -460,7 +460,7 @@ const kh = ref([]);
           .tu {
             width: 100%;
             height: 1.2rem;
-            background: url(../src/img/linshi/3.jpg);
+            background: url(../img/linshi/3.jpg);
             background-size: cover;
             // border-top-left-radius: 0.12rem;
             // border-top-right-radius: 0.12rem;
@@ -485,7 +485,7 @@ const kh = ref([]);
       .bg {
         height: 1.6rem;
         margin-bottom: 0.12rem;
-        background: url(../src/img/tubiao/bg.png);
+        background: url(../img/tubiao/bg.png);
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -563,7 +563,7 @@ const kh = ref([]);
       height: 9rem;
       // height: 100%;
       width: 100%;
-      background: url(../src/img/tubiao/bg2.png);
+      background: url(../img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 2.8rem;
@@ -596,7 +596,7 @@ const kh = ref([]);
       // height: 9rem;
       height: 100%;
       width: 100%;
-      background: url(../src/img/tubiao/bg2.png);
+      background: url(../img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 2.8rem;
@@ -669,7 +669,7 @@ const kh = ref([]);
         .nr:nth-child(odd) {
           height: 4rem;
           width: 100%;
-          background: url(../src/img/tubiao/right.png);
+          background: url(../img/tubiao/right.png);
           background-size: cover;
 
           .left {
@@ -710,7 +710,7 @@ const kh = ref([]);
         .nr:nth-child(even) {
           height: 4rem;
           width: 100%;
-          background: url(../src/img/tubiao/left.png);
+          background: url(../img/tubiao/left.png);
           background-size: cover;
 
           .right {
@@ -760,7 +760,7 @@ const kh = ref([]);
     .up {
       width: 100%;
       height: 4.8rem;
-      background: url(../src/img/linshi/4.jpg);
+      background: url(../img/linshi/4.jpg);
       background-size: cover;
       .biaoti {
         width: 100%;
@@ -831,7 +831,7 @@ const kh = ref([]);
       .bg {
         width: 4rem;
         height: 7.8rem;
-        background: url(../src/img/tubiao/bg.png);
+        background: url(../img/tubiao/bg.png);
         display: flex;
         justify-content: center;
         align-items: center;
