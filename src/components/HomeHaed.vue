@@ -30,7 +30,7 @@
           @click="drawer = true"
           class="menubtn"
         >
-          <img src="src/img/tubiao/caidan.png" alt="" />
+          <img src="../img/tubiao/caidan.png" alt="" />
         </el-button>
 
         <el-drawer v-model="drawer" :with-header="false">
