@@ -222,7 +222,6 @@ onMounted(getIt1);
 
 const it1 = ref([]);
 
-
 const it2 = ref([]);
 
 const it3 = ref([]);
@@ -239,7 +238,7 @@ const kh = ref([]);
 
 <style lang="less" scoped>
 //移动
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 800px) {
   .it6 {
     width: 100%;
     height: 100%;
@@ -555,7 +554,7 @@ const kh = ref([]);
 }
 
 //pc
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 801px) {
   .it6 {
     width: 100%;
     height: 100%;
@@ -747,6 +746,13 @@ const kh = ref([]);
               width: 1.2rem;
             }
           }
+        }
+        p {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 3;
         }
       }
       .ybg {

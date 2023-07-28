@@ -106,7 +106,7 @@ const router = useRouter();
 
 <style lang="less" scoped>
 //移动端
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 800px) {
   .head {
     height: 0.44rem;
     width: 100%;
@@ -169,7 +169,7 @@ const router = useRouter();
 }
 
 //PC
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 801px) {
   .head {
     height: 0.94rem;
     width: 100%;

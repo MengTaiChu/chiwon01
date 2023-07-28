@@ -165,7 +165,7 @@ const router = useRouter();
 
 <style lang="less" scoped>
 //移动
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 800px) {
   .it8 {
     height: 100%;
     background-color: rgb(83, 127, 192, 0.82);
@@ -243,7 +243,7 @@ const router = useRouter();
 
 //pc
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 801px) {
   .it8 {
     height: 1.2rem;
     background-color: rgb(83, 127, 192, 0.82);
