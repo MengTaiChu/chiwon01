@@ -27,4 +27,12 @@ export default {
             mock: true
         })
     },
+    getXmitData(params) {
+        return request({
+            url: '/xmIt/getData',
+            method: 'get',
+            data: params,
+            mock: true
+        })
+    }
 }

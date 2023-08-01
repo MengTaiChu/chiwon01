@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <div class="daohan">
-      <img src="../img/logo/zh-logo.png" alt="" class="logo" />
+      <img src="../img/logo/zh-logo.png" alt="" class="logo" @click="logoBtn" />
       <div class="fenlei">
         <ul>
           <li>
@@ -85,7 +85,7 @@ const getFenlei = async () => {
   // console.log(res);
   fenlei.value = res.fenlei;
 };
-
+// console.log(fenlei);
 onMounted(getFenlei);
 const drawer = ref(false);
 
@@ -99,6 +99,13 @@ const ritem = (item) => {
     } else {
       router.push({ path: item.path }).catch((err) => {});
     }
+  }
+};
+const logoBtn = () => {
+  if (window.location.pathname === "/") {
+    window.location.assign("/");
+  } else {
+    window.location.href = "/";
   }
 };
 const router = useRouter();

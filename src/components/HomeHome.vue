@@ -190,8 +190,6 @@ import { getCurrentInstance, ref, onMounted } from "vue";
 
 const { proxy } = getCurrentInstance();
 
-const it = ref([]);
-
 const getIt1 = async () => {
   const res = await proxy.$api.getItData();
   it1.value = res.it1;
