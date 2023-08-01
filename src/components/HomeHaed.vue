@@ -90,7 +90,7 @@ onMounted(getFenlei);
 const drawer = ref(false);
 
 const ritem = (item) => {
-  console.log(item);
+  // console.log(item);
   if (item.path) {
     const currentRoute = router.currentRoute.value.path;
     if (currentRoute === item.path) {

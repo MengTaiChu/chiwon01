@@ -6,4 +6,4 @@ import xmIt from './mockData/xmIt'
 Mock.mock('/homeFoot/getData', homeFootApi.getHomeFootData)
 Mock.mock('/homeHaed/getData', homeHaed.getHomeHaedData)
 Mock.mock('/homeIt/getData', homeIt.getItData)
-Mock.mock('/xmIt/getData', xmIt.getData)
+Mock.mock('/xmIt/getData', xmIt.getXmitData)
