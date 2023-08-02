@@ -836,6 +836,7 @@ const kh = ref([]);
         width: 4rem;
         height: 7.8rem;
         background: url(../img/tubiao/bg.png);
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;

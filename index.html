@@ -6,11 +6,32 @@
   <link rel="icon" href="/logo.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>广东启创智能科技有限公司</title>
+
 </head>
 
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
+
+  <script>
+    function updateFontSize() {
+      var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+      if (windowWidth > 801) {
+        var fontSize = windowWidth * 0.065; // 根据需求调整比例
+        document.documentElement.style.fontSize = fontSize + 'px';
+      } else {
+        document.documentElement.style.fontSize = '100px';
+
+      }
+    }
+
+    // 初始设置
+    updateFontSize();
+
+    // 监听窗口大小改变事件
+    window.addEventListener('resize', updateFontSize);
+  </script>
+
 </body>
 
 </html>
