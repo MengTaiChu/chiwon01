@@ -6,7 +6,6 @@
     <div class="xmPdata" v-for="item in xm" :key="item">
       <div class="biaoti">
         <h5>
-          <!-- 这是某个项目的标题 -->
           {{ item.bt }}
         </h5>
       </div>
@@ -21,7 +20,6 @@
             </div>
             <div class="bm">
               <p>
-                <!-- 这里是背面的一些内容，主要就是对这一个小标题的内容作出的一些简单或详细的介绍 -->
                 {{ xbtItem.bm }}
               </p>
             </div>
