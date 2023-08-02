@@ -32,7 +32,8 @@
         </div>
       </div>
     </div>
-    <div class="xmAdata" v-for="item in xm" :key="item">
+
+    <div class="xmAdata" v-for="(item, index) in xm" :key="index">
       <div class="nr">
         <div class="biaoti">
           <h5>{{ item.bt }}</h5>
@@ -49,7 +50,7 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance, onMounted } from "vue";
+import { ref, getCurrentInstance, onMounted, computed } from "vue";
 
 const { proxy } = getCurrentInstance();
 
@@ -58,9 +59,7 @@ const xm = ref([]);
 const getXmit = async () => {
   const res = await proxy.$api.getXmitData();
   xm.value = res.xm;
-  // console.log(res.xm1);
 };
-// console.log(xm);
 onMounted(getXmit);
 </script>
 
@@ -70,45 +69,67 @@ onMounted(getXmit);
     width: 100%;
     // height: 2.56rem;
     height: 100%;
-
-    .biaoti {
-      background-color: aqua;
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 50%;
+    margin-top: 0.12rem;
+    margin-bottom: 0.12rem;
+    .nr {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      h5 {
-        font-size: 0.18rem;
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-        margin: 16px;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      .biaoti {
+        background-color: rgb(255, 255, 255);
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        h5 {
+          font-size: 0.18rem;
+          text-align: center;
+          // display: table-cell;
+          // vertical-align: middle;
+          margin: 16px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        .xbt {
+          width: 1.6rem;
+          height: 1.2rem;
+          position: relative;
+          margin: 0.08rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-size: 0.16rem;
+            position: absolute;
+            width: 100%;
+
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.35);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 0.12rem;
+          }
+        }
       }
     }
-    .xbt {
-      width: 1.6rem;
-      height: 1.2rem;
-      position: relative;
-      p {
-        font-size: 0.16rem;
-        position: absolute;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-      }
-    }
-
-
   }
+
   .it1 {
     width: 100%;
     height: 1.6rem;

@@ -39,26 +39,26 @@ export default {
                         xbt: [
                             {
                                 zm: '第一个小标题',
-                                bm: '第一块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
+                                bm: 'AAA第一块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
                                 next: '../src/img/tubiao/next.png',
                                 img:'../src/img/linshi/1.jpg'
                             },
                             {
                                 zm: '第2个小标题',
-                                bm: '第2块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
+                                bm: 'BBB第2块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
                                 next: '../src/img/tubiao/next.png',
                                 img:'../src/img/linshi/2.jpg'
 
                             },
                             {
                                 zm: '第3个小标题',
-                                bm: '第3块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
+                                bm: 'CCC第3块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
                                 next: '../src/img/tubiao/next.png',
                                 img:'../src/img/linshi/1.jpg'
                             },
                             {
                                 zm: '第4个小标题',
-                                bm: '第4块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
+                                bm: 'DDD第4块背面的内容，为了能够看的更好点的体验已经在尽量加字了',
                                 next: '../src/img/tubiao/next.png',
                                 img:'../src/img/linshi/2.jpg'
                             }
