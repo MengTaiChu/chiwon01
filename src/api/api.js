@@ -33,6 +33,14 @@ export default {
             data: params,
             mock: true
         })
+    },
+    getAboutHomeData(params) {
+        return request({
+            url: '/aboutHome/getData',
+            method: 'get',
+            data: params,
+            mock: true
+        })
     }
 }
 

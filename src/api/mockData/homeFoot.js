@@ -50,15 +50,15 @@ export default {
                         fenz: [
                             {
                                 pf: "人工智能",
-                                path: "/",
+                                path: "/about",
                             },
                             {
                                 pf: "智能制造",
-                                path: "/",
+                                path: "/about",
                             },
                             {
                                 pf: "工业机器人",
-                                path: "/",
+                                path: "/about",
                             },
                         ],
                         path: "/about",

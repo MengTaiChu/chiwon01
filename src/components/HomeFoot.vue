@@ -128,6 +128,8 @@ const gy = ref([]);
 const getGy = async () => {
   //本地mock
   const res = await axios.get("/homeFoot/getData");
+  gy.value = res.data.data.gy;
+
   //线上mock
   // const res = await axios.get(
   //   "https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/homeFoot/getData"
@@ -140,7 +142,6 @@ const getGy = async () => {
 
   // gy.value = res.gy;
 
-  gy.value = res.data.data.gy;
   // console.log(res);
 };
 onMounted(getGy);
