@@ -8,22 +8,21 @@ import 'element-plus/dist/index.css'
 
 import naive from 'naive-ui/es/preset'
 
-import { Swipe, SwipeItem } from 'vant'
+import Vant from 'vant'
 import 'vant/lib/index.css'
-import { Popup } from 'vant'
-import { Icon } from 'vant'
-import api from './api/api'
+
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/reset.css';
+
+// import api from './api/api'
+// app.config.globalProperties.$api = api
 
 
 const app = createApp(App)
 
-app.config.globalProperties.$api = api
 app.use(router)
 app.use(ElementPlus)
 app.use(naive)
-app.use(Swipe)
-app.use(SwipeItem)
-app.use(Popup)
-app.use(Icon)
-
+app.use(Vant)
+app.use(Antd)
 app.mount('#app')

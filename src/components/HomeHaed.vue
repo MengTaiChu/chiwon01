@@ -54,6 +54,7 @@
 <script setup >
 import { getCurrentInstance, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import axios from "axios";
 
 // const fenlei = ref([
 //   {
@@ -81,9 +82,13 @@ import { useRouter } from "vue-router";
 const { proxy } = getCurrentInstance();
 const fenlei = ref([]);
 const getFenlei = async () => {
-  const res = await proxy.$api.getHomeHaedData();
-  // console.log(res);
-  fenlei.value = res.fenlei;
+  //本地mock
+  const res = await axios.get("/homeHaed/getData");
+  fenlei.value = res.data.data.fenlei;
+
+  // const res = await proxy.$api.getHomeHaedData();
+  // console.log(res.data);
+  // fenlei.value = res.fenlei;
 };
 // console.log(fenlei);
 onMounted(getFenlei);

@@ -5,12 +5,14 @@
 
 当前环境
 */
+
+
 const env = import.meta.env.MODE || 'prod'
 
 const EnvConfig = {
     development: {
         baseApi: '/api',
-        mockApi: 'https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/'
+        mockApi: 'http://localhost:5173/api/'
 
     },
     test: {

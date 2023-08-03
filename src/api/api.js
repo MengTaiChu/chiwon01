@@ -1,5 +1,4 @@
 //整个项目api的管理
-
 import request from "./request"
 export default {
     //关于部分的数据获取
@@ -36,3 +35,4 @@ export default {
         })
     }
 }
+

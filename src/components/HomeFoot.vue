@@ -8,7 +8,6 @@
               <RouterLink :to="item.path">
                 {{ item.name }}
               </RouterLink>
-              <!-- <a :href="item.path" @click="handleClick"> {{ item.name }}</a> -->
             </h5>
 
             <p
@@ -19,9 +18,6 @@
               <RouterLink :to="fenzItem.path">
                 {{ fenzItem.pf }}
               </RouterLink>
-              <!-- <a :href="fenzItem.path" @click="handleClick">
-                {{ fenzItem.pf }}
-              </a> -->
             </p>
           </div>
         </div>
@@ -62,7 +58,7 @@
 <script setup>
 import { getCurrentInstance, onMounted, ref } from "vue";
 import { useRouter, RouterLink } from "vue-router";
-// import axios from "axios";
+import axios from "axios";
 // const gy = ref([
 //   {
 //     name: "首页",
@@ -131,9 +127,7 @@ const gy = ref([]);
 
 const getGy = async () => {
   //本地mock
-  // const res = await axios.get(
-  //   "/homeFoot/getData"
-  // );
+  const res = await axios.get("/homeFoot/getData");
   //线上mock
   // const res = await axios.get(
   //   "https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/homeFoot/getData"
@@ -142,24 +136,15 @@ const getGy = async () => {
   //   gy.value = res.data.data.gy;
   // }
 
-  const res = await proxy.$api.getHomeFootData();
+  // const res = await proxy.$api.getHomeFootData();
 
-  gy.value = res.gy;
+  // gy.value = res.gy;
 
+  gy.value = res.data.data.gy;
   // console.log(res);
 };
 onMounted(getGy);
 
-const h5btn = (item) => {
-  console.log(item);
-};
-const pbtn = (fenzItem) => {
-  console.log(fenzItem);
-};
-const handleClick = (event) => {
-  event.preventDefault();
-  // 在这里添加你想要执行的自定义操作
-};
 const router = useRouter();
 </script>
 

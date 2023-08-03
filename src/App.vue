@@ -18,8 +18,8 @@ body {
   font-size: 100px;
 }
 a {
-  text-decoration: none; /* 清除下划线 */
-  color: inherit; /* 继承父元素颜色 */
+  text-decoration: none; 
+  color: inherit;
   margin: 0;
   padding: 0;
 }

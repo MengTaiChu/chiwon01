@@ -48,15 +48,19 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance, onMounted, computed } from "vue";
+import { ref, getCurrentInstance, onMounted } from "vue";
+import axios from "axios";
 
 const { proxy } = getCurrentInstance();
 
 const xm = ref([]);
 
 const getXmit = async () => {
-  const res = await proxy.$api.getXmitData();
-  xm.value = res.xm;
+  const res = await axios.get("/xmIt/getData");
+  xm.value = res.data.data.xm;
+
+  // const res = await proxy.$api.getXmitData();
+  // xm.value = res.xm;
 };
 onMounted(getXmit);
 </script>

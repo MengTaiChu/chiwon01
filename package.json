@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "ant-design-vue": "^4.0.0",
     "axios": "^1.4.0",
     "element-plus": "^2.3.7",
     "mockjs": "^1.1.0",

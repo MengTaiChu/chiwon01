@@ -17,7 +17,7 @@
     function updateFontSize() {
       var windowWidth = window.innerWidth || document.documentElement.clientWidth;
       if (windowWidth > 801) {
-        var fontSize = windowWidth * 0.065; // 根据需求调整比例
+        var fontSize = windowWidth * 0.065;
         document.documentElement.style.fontSize = fontSize + 'px';
       } else {
         document.documentElement.style.fontSize = '100px';
@@ -25,10 +25,8 @@
       }
     }
 
-    // 初始设置
     updateFontSize();
 
-    // 监听窗口大小改变事件
     window.addEventListener('resize', updateFontSize);
   </script>
 

@@ -187,36 +187,32 @@
 
 <script setup>
 import { getCurrentInstance, ref, onMounted } from "vue";
+import axios from "axios";
 
 const { proxy } = getCurrentInstance();
 
 const getIt1 = async () => {
-  const res = await proxy.$api.getItData();
-  it1.value = res.it1;
-  it2.value = res.it2;
-  it3.value = res.it3;
-  it4.value = res.it4;
-  it6.value = res.it6;
-  kh.value = res.kh;
-  // console.log(it2);
+  //本地mock
+  const res = await axios.get("/homeIt/getData");
+  it1.value = res.data.data.it1;
+  it2.value = res.data.data.it2;
+  it3.value = res.data.data.it3;
+  it4.value = res.data.data.it4;
+  it6.value = res.data.data.it6;
+  kh.value = res.data.data.kh;
+
+  // const res = await proxy.$api.getItData();
+  // it1.value = res.it1;
+  // it2.value = res.it2;
+  // it3.value = res.it3;
+  // it4.value = res.it4;
+  // it6.value = res.it6;
+  // kh.value = res.kh;
+
+  // console.log(res.data.data);
 };
 
 onMounted(getIt1);
-
-// const it1 = ref([
-//   {
-//     src: "/src/img/logo/zh-logo.png",
-//     alt: "image1",
-//   },
-//   {
-//     src: "/src/img/linshi/5.jpg",
-//     alt: "image2",
-//   },
-//   {
-//     src: "/src/img/linshi/6.jpg",
-//     alt: "image3",
-//   },
-// ]);
 
 const it1 = ref([]);
 
