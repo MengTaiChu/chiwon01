@@ -3,46 +3,64 @@
     <div class="it1">
       <img src="../img/linshi/xm1.jpg" alt="" />
     </div>
-    <div class="xmPdata" v-for="item in xm" :key="item">
-      <div class="biaoti">
-        <h5>
-          {{ item.bt }}
-        </h5>
-      </div>
-      <div class="nr">
-        <div class="xbt" v-for="xbtItem in item.xbt" :key="xbtItem">
-          <div class="card">
-            <div class="zm">
-              <img :src="xbtItem.img" />
-              <p>
-                {{ xbtItem.zm }}
-              </p>
+
+    <div class="PCXM">
+      <div class="xmPdata" v-for="item in xm" :key="item">
+        <div class="biaoti">
+          <h5>
+            {{ item.bt }}
+          </h5>
+        </div>
+        <div class="nr">
+          <div class="xbt" v-for="xbtItem in item.xbt" :key="xbtItem">
+            <div class="card">
+              <div class="zm">
+                <img :src="xbtItem.img" />
+                <p>
+                  {{ xbtItem.zm }}
+                </p>
+              </div>
+              <div class="bm">
+                <p>
+                  {{ xbtItem.bm }}
+                </p>
+              </div>
             </div>
-            <div class="bm">
-              <p>
-                {{ xbtItem.bm }}
-              </p>
+            <div class="next">
+              <img :src="xbtItem.next" />
             </div>
-          </div>
-          <div class="next">
-            <img :src="xbtItem.next" />
           </div>
         </div>
       </div>
     </div>
-
-    <div class="xmAdata" v-for="(item, index) in xm" :key="index">
-      <div class="nr">
-        <div class="biaoti">
-          <h5>{{ item.bt }}</h5>
-        </div>
-        <div class="card">
-          <div class="xbt" v-for="xbtItem in item.xbt" :key="xbtItem">
-            <img :src="xbtItem.img" alt="img" />
-            <p>{{ xbtItem.zm }}</p>
+    <div class="YDXM">
+      <div class="xmAdata" v-for="(item, index) in xm" :key="index">
+        <div class="nr">
+          <div class="biaoti">
+            <h5>{{ item.bt }}</h5>
+          </div>
+          <div class="card">
+            <div class="xbt" v-for="xbtItem in item.xbt" :key="xbtItem">
+              <img :src="xbtItem.img" alt="img" />
+              <p @click="Dialog(xbtItem)">{{ xbtItem.zm }}</p>
+            </div>
           </div>
         </div>
       </div>
+      <el-dialog
+        v-model="dialogVisible"
+        width="70%"
+        draggable
+        align-center
+        center
+      >
+        <div class="bmData">
+          {{ dialogXbtItem ? dialogXbtItem.bm : "" }}
+        </div>
+        <div class="escBtn">
+          <el-button @click="dialogVisible = false">关闭</el-button>
+        </div>
+      </el-dialog>
     </div>
   </div>
 </template>
@@ -63,6 +81,14 @@ const getXmit = async () => {
   // xm.value = res.xm;
 };
 onMounted(getXmit);
+
+const dialogVisible = ref(false);
+const dialogXbtItem = ref(null);
+
+function Dialog(xbtItem) {
+  dialogXbtItem.value = xbtItem;
+  dialogVisible.value = true;
+}
 </script>
 
 <style lang="less" scoped>
@@ -140,7 +166,13 @@ onMounted(getXmit);
       height: 100%;
     }
   }
-  .xmPdata {
+
+  .escBtn {
+    margin-top: 0.16rem;
+    display: flex;
+    justify-content: center;
+  }
+  .PCXM {
     display: none;
   }
 }

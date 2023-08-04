@@ -530,11 +530,12 @@ const kh = ref([]);
   .it1 {
     width: 100%;
     .ylb {
-      height: 1.2rem;
+      height: 1.6rem;
 
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
 

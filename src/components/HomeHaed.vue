@@ -15,6 +15,7 @@
                 v-for="item in fenlei"
                 :key="item"
                 @click="ritem(item)"
+                :style="{ color: item.path === $route.path ? '#08d9d6' : '' }"
               >
                 {{ item.label }}
               </el-menu-item>

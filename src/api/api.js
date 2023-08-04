@@ -41,6 +41,14 @@ export default {
             data: params,
             mock: true
         })
+    },
+    getCpHomeData(params) {
+        return request({
+            url: '/cpHome/getData',
+            method: 'get',
+            data: params,
+            mock: true
+        })
     }
 }
 
