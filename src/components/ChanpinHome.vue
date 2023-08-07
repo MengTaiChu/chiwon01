@@ -6,7 +6,13 @@
     <div class="PCCP">
       <div class="nr" v-for="item in cp" :key="item">
         <div class="left">
-          <img :src="item.src" alt="233" />
+          <el-image
+            :src="item.src"
+            :zoom-rate="1.2"
+            :preview-src-list="[item.src]"
+            fit="cover"
+            alt="网络错误"
+          />
         </div>
         <div class="right">
           <h5>{{ item.h5 }}</h5>
@@ -30,7 +36,6 @@ const getXmit = async () => {
   const res = await axios.get("/cpHome/getData");
   cp.value = res.data.data.cp;
 };
-console.log(cp);
 onMounted(getXmit);
 </script>
 
@@ -47,7 +52,7 @@ onMounted(getXmit);
       width: 1.6rem;
       height: 1.6rem;
       margin-right: 0.08rem;
-      img {
+      .el-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -99,7 +104,7 @@ onMounted(getXmit);
       width: 4rem;
       height: 4rem;
       margin-right: 0.3rem;
-      img {
+      .el-image {
         width: 100%;
         height: 100%;
         object-fit: cover;

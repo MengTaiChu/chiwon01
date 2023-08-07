@@ -14,6 +14,8 @@ import 'vant/lib/index.css'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 
+
+
 // import api from './api/api'
 // app.config.globalProperties.$api = api
 

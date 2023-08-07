@@ -40,9 +40,25 @@
             <h5>{{ item.bt }}</h5>
           </div>
           <div class="card">
-            <div class="xbt" v-for="xbtItem in item.xbt" :key="xbtItem">
+            <div
+              class="xbt"
+              v-for="xbtItem in item.xbt"
+              :key="xbtItem"
+              @click="Dialog(xbtItem)"
+            >
               <img :src="xbtItem.img" alt="img" />
-              <p @click="Dialog(xbtItem)">{{ xbtItem.zm }}</p>
+              <p style="margin-left: 0.12rem; color: white">
+                {{ xbtItem.zm + "" }}
+              </p>
+              <div class="jt">
+                <p
+                  v-for="(text, index) in texts"
+                  :key="index"
+                  :class="['text', { active: index === activeIndex }]"
+                >
+                  {{ text }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +96,6 @@ const getXmit = async () => {
   // const res = await proxy.$api.getXmitData();
   // xm.value = res.xm;
 };
-onMounted(getXmit);
 
 const dialogVisible = ref(false);
 const dialogXbtItem = ref(null);
@@ -89,6 +104,24 @@ function Dialog(xbtItem) {
   dialogXbtItem.value = xbtItem;
   dialogVisible.value = true;
 }
+
+const texts = ref([">", ">", ">"]);
+let activeIndex = ref(0);
+
+function startCruising() {
+  setInterval(() => {
+    cycleTexts();
+  }, 300);
+}
+
+function cycleTexts() {
+  activeIndex.value++;
+  if (activeIndex.value >= texts.value.length) {
+    activeIndex.value = 0;
+  }
+}
+
+onMounted(getXmit, startCruising());
 </script>
 
 <style lang="less" scoped>
@@ -141,17 +174,28 @@ function Dialog(xbtItem) {
           align-items: center;
           p {
             font-size: 0.16rem;
-            position: absolute;
             width: 100%;
-
+            z-index: 1;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.35);
           }
           img {
             width: 100%;
             height: 100%;
             position: absolute;
             border-radius: 0.12rem;
+            box-shadow: 1px 1px 5px #4FC3F7;
+          }
+          .jt {
+            display: flex;
+            margin-right: 0.12rem;
+            .text {
+              transition: all 0.5s ease-in-out;
+              color: #e1f5fe;
+            }
+
+            .text.active {
+              color: #0288d1;
+            }
           }
         }
       }
