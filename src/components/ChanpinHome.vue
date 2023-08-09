@@ -1,5 +1,5 @@
 <template>
-  <div class="cp">
+  <div :class="chanpin">
     <div class="it1">
       <img src="../img/linshi/xm1.jpg" alt="" />
     </div>
@@ -30,9 +30,10 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 import WOW from "wow.js";
+import Device from "current-device";
 
 const cp = ref([]);
-
+const chanpin = ref("");
 const getXmit = async () => {
   const res = await axios.get("/cpHome/getData");
   cp.value = res.data.data.cp;
@@ -50,11 +51,18 @@ onMounted(() => {
     resetAnimation: true,
   });
   wow.init();
+  if (Device.mobile()) {
+    chanpin.value = "mobile";
+  } else if (Device.ipad()) {
+    chanpin.value = "desktop";
+  } else if (Device.desktop()) {
+    chanpin.value = "desktop";
+  }
 });
 </script>
 
 <style lang="less" scoped>
-@media screen and (max-width: 800px) {
+.mobile {
   .nr {
     width: 100%;
     height: 100%;
@@ -91,7 +99,6 @@ onMounted(() => {
       }
       p {
         font-size: 0.08rem;
-        // margin-top: 0.38rem;
       }
     }
   }
@@ -104,9 +111,7 @@ onMounted(() => {
     }
   }
 }
-//PC
-@media screen and (min-width: 801px) {
-
+.desktop {
   .PCCP {
     height: 100%;
     width: 100%;

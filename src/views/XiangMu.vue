@@ -16,16 +16,6 @@ import XiangmuHome from "../components/XiangmuHome.vue";
 
 
 <style lang="less" scoped>
-//PC端
-@media screen and (min-width: 801px) {
-  .el-main {
-    --el-main-padding: 0;
-    min-width: 12rem;
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .el-main {
   --el-main-padding: 0;
 }

@@ -1,52 +1,59 @@
 <template>
-  <div class="head">
-    <div class="daohan">
-      <img src="../img/logo/zh-logo.png" alt="" class="logo" @click="logoBtn" />
-      <div class="fenlei">
-        <ul>
-          <li>
-            <el-menu
-              mode="horizontal"
-              class="el-menu-demo"
-              @select="handleSelect"
-              style="border: 0"
-            >
-              <el-menu-item
+  <div :class="pd">
+    <div class="head">
+      <div class="daohan">
+        <img
+          src="../img/logo/zh-logo.png"
+          alt=""
+          class="logo"
+          @click="logoBtn"
+        />
+        <div class="fenlei">
+          <ul>
+            <li>
+              <el-menu
+                mode="horizontal"
+                class="el-menu-demo"
+                @select="handleSelect"
+                style="border: 0"
+              >
+                <el-menu-item
+                  v-for="item in fenlei"
+                  :key="item"
+                  @click="ritem(item)"
+                  :style="{ color: item.path === $route.path ? '#08d9d6' : '' }"
+                >
+                  {{ item.label }}
+                </el-menu-item>
+              </el-menu>
+            </li>
+            <li>1888888888</li>
+          </ul>
+        </div>
+        <div class="ycaidan">
+          <el-button
+            type="text"
+            style="margin-left: 16px"
+            @click="drawer = true"
+            class="menubtn"
+          >
+            <img src="../img/tubiao/caidan.png" alt="" />
+          </el-button>
+
+          <el-drawer v-model="drawer" :with-header="false">
+            <ul class="menuUl">
+              <li
                 v-for="item in fenlei"
                 :key="item"
-                @click="ritem(item)"
                 :style="{ color: item.path === $route.path ? '#08d9d6' : '' }"
               >
-                {{ item.label }}
-              </el-menu-item>
-            </el-menu>
-          </li>
-          <li>1888888888</li>
-        </ul>
-      </div>
-      <div class="ycaidan">
-        <el-button
-          type="text"
-          style="margin-left: 16px"
-          @click="drawer = true"
-          class="menubtn"
-        >
-          <img src="../img/tubiao/caidan.png" alt="" />
-        </el-button>
-
-        <el-drawer v-model="drawer" :with-header="false">
-          <ul class="menuUl">
-            <li
-              v-for="item in fenlei"
-              :key="item"
-              :style="{ color: item.path === $route.path ? '#08d9d6' : '' }"
-            >
-              <router-link :to="item.path">
-                {{ item.label }}
-              </router-link>
-            </li>
-          </ul>
-        </el-drawer>
+                <router-link :to="item.path">
+                  {{ item.label }}
+                </router-link>
+              </li>
+            </ul>
+          </el-drawer>
+        </div>
       </div>
     </div>
   </div>
@@ -56,51 +63,32 @@
 import { getCurrentInstance, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import axios from "axios";
-
-// const fenlei = ref([
-//   {
-//     path: "/home",
-//     name: "home",
-//     label: "首页",
-//   },
-//   {
-//     path: "/chanpin",
-//     name: "chanpin",
-//     label: "产品",
-//   },
-//   {
-//     path: "/xiangmu",
-//     name: "xiangmu",
-//     label: "项目",
-//   },
-//   {
-//     path: "/about",
-//     name: "about",
-//     label: "联系我们",
-//   },
-// ]);
+import Device from "current-device";
 
 const { proxy } = getCurrentInstance();
 const fenlei = ref([]);
 const getFenlei = async () => {
-  //本地mock
   const res = await axios.get("/homeHaed/getData");
   fenlei.value = res.data.data.fenlei;
-
-  // const res = await proxy.$api.getHomeHaedData();
-  // console.log(res.data);
-  // fenlei.value = res.fenlei;
 };
-// console.log(fenlei);
-onMounted(getFenlei);
+
+const pd = ref("");
+onMounted(() => {
+  getFenlei();
+  if (Device.mobile()) {
+    pd.value = "mobile";
+  } else if (Device.ipad) {
+    pd.value = "desktop";
+  } else if (Device.desktop()) {
+    pd.value = "desktop";
+  }
+});
 const drawer = ref(false);
 
 const ritem = (item) => {
-  // console.log(item);
   if (item.path) {
     const currentRoute = router.currentRoute.value.path;
     if (currentRoute === item.path) {
-      // 路由为当前时刷新页面
       router.go(0);
     } else {
       router.push({ path: item.path }).catch((err) => {});
@@ -118,8 +106,7 @@ const router = useRouter();
 </script>
 
 <style lang="less" scoped>
-//移动端
-@media screen and (max-width: 800px) {
+.mobile {
   .head {
     height: 0.44rem;
     width: 100%;
@@ -180,9 +167,7 @@ const router = useRouter();
     }
   }
 }
-
-//PC
-@media screen and (min-width: 801px) {
+.desktop {
   .head {
     height: 0.94rem;
     width: 100%;
@@ -226,7 +211,6 @@ const router = useRouter();
           }
         }
       }
-      // background-color: rgba(255, 0, 0, 0.321);
     }
 
     .ycaidan {

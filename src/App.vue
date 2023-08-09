@@ -2,12 +2,22 @@
   <router-view />
 </template>
 <script setup>
+import Device from "current-device";
+
+function updateFontSize() {
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  const fontSize = Device.mobile() ? 100 : windowWidth * 0.065;
+  document.documentElement.style.fontSize = fontSize + "px";
+}
+
+if (Device.mobile() || Device.ipad() || Device.desktop()) {
+}
+
+updateFontSize();
+
+window.addEventListener("resize", updateFontSize);
 </script>
-<!-- 
 
-不用媒体查询就要写两套代码，虽然不是什么难事，但现在要我重构还真是折磨人
-
- -->
 <style>
 *,
 html,

@@ -12,6 +12,7 @@
     "animate.css": "^4.1.1",
     "ant-design-vue": "^4.0.0",
     "axios": "^1.4.0",
+    "current-device": "^0.10.2",
     "element-plus": "^2.3.7",
     "mockjs": "^1.1.0",
     "vant": "^4.6.2",

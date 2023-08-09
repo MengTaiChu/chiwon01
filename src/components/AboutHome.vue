@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div :class="about">
     <div class="it1">
       <img src="../img/linshi/xm1.jpg" alt="" />
     </div>
@@ -19,7 +19,9 @@
 
 <script setup>
 import axios from "axios";
+
 import { getCurrentInstance, onMounted, ref } from "vue";
+import Device from "current-device";
 
 const aboutData = ref([]);
 
@@ -28,15 +30,23 @@ const { proxy } = getCurrentInstance;
 const getAboutData = async () => {
   const res = await axios.get("/aboutHome/getData");
   aboutData.value = res.data.data.about;
-
-  //   const res = await proxy.$api.getAboutHomeData()
 };
-onMounted(getAboutData);
+
+const about = ref("");
+onMounted(() => {
+  getAboutData();
+  if (Device.mobile()) {
+    about.value = "mobile";
+  } else if (Device.ipad()) {
+    about.value = "desktop";
+  } else if (Device.desktop()) {
+    about.value = "desktop";
+  }
+});
 </script>
 
 <style lang="less" scoped>
-//移动
-@media screen and(max-width :800px) {
+.mobile {
   .i {
     margin-top: 0.16rem;
     margin-bottom: 0.16rem;
@@ -66,8 +76,7 @@ onMounted(getAboutData);
     }
   }
 }
-//PC
-@media screen and(min-width :801px) {
+.desktop {
   .i {
     display: flex;
     justify-content: center;

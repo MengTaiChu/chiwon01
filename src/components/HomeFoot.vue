@@ -1,5 +1,5 @@
 <template>
-  <div class="foot">
+  <div :class="foot">
     <div class="it7">
       <div class="guanyu">
         <div class="nr" v-for="item in gy" :key="item">
@@ -59,100 +59,32 @@
 import { getCurrentInstance, onMounted, ref } from "vue";
 import { useRouter, RouterLink } from "vue-router";
 import axios from "axios";
-// const gy = ref([
-//   {
-//     name: "首页",
-//     fenz: "",
-//     path: "/",
-//   },
-//   {
-//     name: "技术支持",
-//     fenz: [
-//       {
-//         pf: "人工智能",
-//         path: "/",
-//       },
-//       {
-//         pf: "智能制造",
-//         path: "/",
-//       },
-//       {
-//         pf: "工业机器人",
-//         path: "/",
-//       },
-//     ],
-//     path: "/chanpin",
-//   },
-//   {
-//     name: "项目成果",
-//     fenz: [
-//       {
-//         pf: "人工智能",
-//         path: "/",
-//       },
-//       {
-//         pf: "智能制造",
-//         path: "/",
-//       },
-//       {
-//         pf: "工业机器人",
-//         path: "/",
-//       },
-//     ],
-//     path: "/xiangmu",
-//   },
-//   {
-//     name: "联系我们",
-//     fenz: [
-//       {
-//         pf: "人工智能",
-//         path: "/",
-//       },
-//       {
-//         pf: "智能制造",
-//         path: "/",
-//       },
-//       {
-//         pf: "工业机器人",
-//         path: "/",
-//       },
-//     ],
-//     path: "/about",
-//   },
-// ]);
+import Device from "current-device";
 
 const { proxy } = getCurrentInstance();
 
 const gy = ref([]);
-
+const foot = ref("");
 const getGy = async () => {
-  //本地mock
   const res = await axios.get("/homeFoot/getData");
   gy.value = res.data.data.gy;
-
-  //线上mock
-  // const res = await axios.get(
-  //   "https://www.fastmock.site/mock/fd691808c444d01767b795d758775d37/api/homeFoot/getData"
-  // );
-  // if (res.data.code == 200) {
-  //   gy.value = res.data.data.gy;
-  // }
-
-  //简化
-  // const res = await proxy.$api.getHomeFootData();
-
-  // gy.value = res.gy;
-
-  // console.log(res);
 };
-onMounted(getGy);
+onMounted(() => {
+  getGy();
+  if (Device.mobile()) {
+    foot.value = "mobile";
+  } else if (Device.ipad()) {
+    foot.value = "desktop";
+  } else if (Device.desktop()) {
+    foot.value = "desktop";
+  }
+});
 
 const router = useRouter();
 </script>
 
 <style lang="less" scoped>
-//移动
-@media screen and (max-width: 800px) {
+.mobile {
   .it8 {
     height: 100%;
     background-color: rgb(83, 127, 192, 0.82);
@@ -161,7 +93,6 @@ const router = useRouter();
     justify-content: center;
     align-items: center;
     .dizhi {
-      // display: flex;
       display: grid;
       grid-template-columns: 1fr 1fr;
       flex-direction: column;
@@ -212,13 +143,11 @@ const router = useRouter();
         img {
           width: 0.48rem;
           height: 0.48rem;
-          // margin-bottom: 0.14rem;
         }
 
         p {
           font-size: 0.12rem;
           color: #fff;
-          // margin-top: 0.14rem;
         }
       }
       .nr {
@@ -227,10 +156,7 @@ const router = useRouter();
     }
   }
 }
-
-//pc
-
-@media screen and (min-width: 801px) {
+.desktop {
   .it8 {
     height: 1.2rem;
     background-color: rgb(83, 127, 192, 0.82);
@@ -240,7 +166,6 @@ const router = useRouter();
     justify-content: center;
     align-items: center;
     .dizhi {
-      // display: flex;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-content: center;

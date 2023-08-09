@@ -1,5 +1,5 @@
 <template>
-  <div class="it">
+  <div :class="it">
     <div class="it1">
       <img src="../img/linshi/xm1.jpg" alt="" />
     </div>
@@ -84,17 +84,16 @@
 <script setup>
 import { ref, getCurrentInstance, onMounted } from "vue";
 import axios from "axios";
-
+import Device from "current-device";
 const { proxy } = getCurrentInstance();
 
 const xm = ref([]);
-
+const it = ref("");
 const getXmit = async () => {
   const res = await axios.get("/xmIt/getData");
   xm.value = res.data.data.xm;
 
-  // const res = await proxy.$api.getXmitData();
-  // xm.value = res.xm;
+  
 };
 
 const dialogVisible = ref(false);
@@ -121,14 +120,23 @@ function cycleTexts() {
   }
 }
 
-onMounted(getXmit, startCruising());
+onMounted(() => {
+  getXmit();
+  startCruising();
+  if (Device.mobile()) {
+    it.value = "mobile";
+  } else if (Device.ipad()) {
+    it.value = "desktop";
+  } else if (Device.desktop()) {
+    it.value = "desktop";
+  }
+});
 </script>
 
 <style lang="less" scoped>
-@media screen and (max-width: 800px) {
+.mobile {
   .xmAdata {
     width: 100%;
-    // height: 2.56rem;
     height: 100%;
     margin-top: 0.12rem;
     margin-bottom: 0.12rem;
@@ -150,8 +158,7 @@ onMounted(getXmit, startCruising());
         h5 {
           font-size: 0.18rem;
           text-align: center;
-          // display: table-cell;
-          // vertical-align: middle;
+
           margin: 16px;
           display: -webkit-box;
           -webkit-line-clamp: 3;
@@ -183,7 +190,7 @@ onMounted(getXmit, startCruising());
             height: 100%;
             position: absolute;
             border-radius: 0.12rem;
-            box-shadow: 1px 1px 5px #4FC3F7;
+            box-shadow: 1px 1px 5px #4fc3f7;
           }
           .jt {
             display: flex;
@@ -220,8 +227,7 @@ onMounted(getXmit, startCruising());
     display: none;
   }
 }
-//PC
-@media screen and (min-width: 801px) {
+.desktop {
   .xmPdata {
     width: 100%;
     height: 5.2rem;

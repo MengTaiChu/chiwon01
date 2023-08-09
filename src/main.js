@@ -22,6 +22,8 @@ import "wow.js/css/libs/animate.css"
 // app.config.globalProperties.$api = api
 
 
+import device from 'current-device'
+
 const app = createApp(App)
 
 app.use(router)
@@ -30,4 +32,5 @@ app.use(naive)
 app.use(Vant)
 app.use(Antd)
 app.use(animated)
+app.use(device)
 app.mount('#app')

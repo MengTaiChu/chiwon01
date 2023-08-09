@@ -1,5 +1,5 @@
 <template>
-  <div class="it">
+  <div :class="it">
     <div class="it1">
       <el-carousel trigger="click" arrow="always" height="100%" class="plb">
         <el-carousel-item v-for="item in it1" :key="item">
@@ -65,7 +65,7 @@
 
         <div class="bg">
           <div
-            class="nr wow animate__fadeInUp "
+            class="nr wow animate__fadeInUp"
             v-for="(item, index) in it4"
             :key="index"
           >
@@ -193,11 +193,11 @@
 import { getCurrentInstance, ref, onMounted } from "vue";
 import axios from "axios";
 import WOW from "wow.js";
+import Device from "current-device";
 
 const { proxy } = getCurrentInstance();
 
 const getIt1 = async () => {
-  //本地mock
   const res = await axios.get("/homeIt/getData");
   it1.value = res.data.data.it1;
   it2.value = res.data.data.it2;
@@ -205,17 +205,9 @@ const getIt1 = async () => {
   it4.value = res.data.data.it4;
   it6.value = res.data.data.it6;
   kh.value = res.data.data.kh;
-
-  // const res = await proxy.$api.getItData();
-  // it1.value = res.it1;
-  // it2.value = res.it2;
-  // it3.value = res.it3;
-  // it4.value = res.it4;
-  // it6.value = res.it6;
-  // kh.value = res.kh;
-
-  // console.log(res.data.data);
 };
+
+const it = ref("");
 
 const it1 = ref([]);
 
@@ -242,6 +234,13 @@ onMounted(() => {
     resetAnimation: true,
   });
   wow.init();
+  if (Device.mobile()) {
+    it.value = "mobile";
+  } else if (Device.ipad()) {
+    it.value = "desktop";
+  } else if (Device.desktop()) {
+    it.value = "desktop";
+  }
 });
 </script>
 
@@ -249,13 +248,11 @@ onMounted(() => {
 
 
 <style lang="less" scoped>
-//移动
-@media screen and (max-width: 800px) {
+.mobile {
   .it6 {
     width: 100%;
     height: 100%;
     .daiding {
-      // height: 9rem;
       height: 100%;
       width: 100%;
       background: url(../img/tubiao/bg2.png);
@@ -269,7 +266,6 @@ onMounted(() => {
         background-size: cover;
         h1 {
           font-size: 0.24rem;
-          // margin-bottom: 0.8rem;
         }
       }
       .nr {
@@ -293,7 +289,6 @@ onMounted(() => {
   .it5 {
     margin-top: 0.16rem;
     .daiding {
-      // height: 9rem;
       height: 100%;
       width: 100%;
       background: url(../img/tubiao/bg2.png);
@@ -307,7 +302,6 @@ onMounted(() => {
         background-size: cover;
         h1 {
           font-size: 0.24rem;
-          // margin-bottom: 0.8rem;
         }
       }
 
@@ -321,8 +315,7 @@ onMounted(() => {
           grid-template-columns: 1fr 1fr 1fr 1fr;
           gap: 0.1rem;
           height: 2rem;
-          // margin-left: 1.8rem;
-          // margin-right: 1.8rem;
+
           .khG {
             width: 0.68rem;
             height: 0.68em;
@@ -343,7 +336,6 @@ onMounted(() => {
     .daiding {
       height: 100%;
       width: 100%;
-      // background-color: aqua;
       .biaoti {
         width: 100%;
         height: 0.88rem;
@@ -354,7 +346,6 @@ onMounted(() => {
         background-size: cover;
         h1 {
           font-size: 0.24rem;
-          // margin-bottom: 0.8rem;
         }
       }
       .ybg {
@@ -406,7 +397,6 @@ onMounted(() => {
   }
   .it3 {
     width: 100%;
-    // height: 8.2rem;
     .jishu {
       display: flex;
       flex-direction: column;
@@ -431,7 +421,6 @@ onMounted(() => {
         }
       }
       .down {
-        // background-color: aqua;
         width: 80%;
         border-radius: 0.12rem;
         .nr:first-child {
@@ -473,8 +462,7 @@ onMounted(() => {
             height: 1.2rem;
             background: url(../img/linshi/3.jpg);
             background-size: cover;
-            // border-top-left-radius: 0.12rem;
-            // border-top-right-radius: 0.12rem;
+
             img {
               display: none;
               width: 100%;
@@ -565,21 +553,17 @@ onMounted(() => {
     height: 1.2rem;
   }
 }
-
-//pc
-@media screen and (min-width: 801px) {
+.desktop {
   .it6 {
     width: 100%;
     height: 100%;
     .daiding {
       height: 9rem;
-      // height: 100%;
       width: 100%;
       background: url(../img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 2.8rem;
-        // background-color: antiquewhite;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -605,14 +589,12 @@ onMounted(() => {
   }
   .it5 {
     .daiding {
-      // height: 9rem;
       height: 100%;
       width: 100%;
       background: url(../img/tubiao/bg2.png);
       .biaoti {
         width: 100%;
         height: 2.8rem;
-        // background-color: antiquewhite;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -646,14 +628,11 @@ onMounted(() => {
   }
   .it4 {
     .daiding {
-      // height: 14.8rem;
       height: 100%;
       width: 100%;
-      // background-color: aqua;
       .biaoti {
         width: 100%;
         height: 2.8rem;
-        // background-color: antiquewhite;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -664,7 +643,6 @@ onMounted(() => {
       }
       .bg {
         width: 100%;
-        // height: 12rem;
         height: 100%;
         .dan {
           width: 100%;
@@ -748,12 +726,10 @@ onMounted(() => {
             h5 {
               font-size: 0.36rem;
               line-height: 0.42rem;
-              // text-align: right;
             }
             p {
               font-size: 0.24rem;
               line-height: 0.56rem;
-              // text-align: right;
             }
             .chakan {
               width: 1.2rem;
@@ -836,14 +812,12 @@ onMounted(() => {
   }
   .it2 {
     width: 100%;
-    // height: 7.8rem;
     height: 100%;
     display: flex;
     justify-content: center;
     .jieshao {
       width: 12rem;
       height: 100%;
-      // display: flex;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-content: center;

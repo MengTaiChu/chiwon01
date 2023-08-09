@@ -13,23 +13,6 @@
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 
-  <script>
-    function updateFontSize() {
-      var windowWidth = window.innerWidth || document.documentElement.clientWidth;
-      if (windowWidth > 801) {
-        var fontSize = windowWidth * 0.065;
-        document.documentElement.style.fontSize = fontSize + 'px';
-      } else {
-        document.documentElement.style.fontSize = '100px';
-
-      }
-    }
-
-    updateFontSize();
-
-    window.addEventListener('resize', updateFontSize);
-  </script>
-
 </body>
 
 </html>
