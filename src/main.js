@@ -14,7 +14,9 @@ import 'vant/lib/index.css'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 
-
+import animated from "animate.css"
+import 'animate.css';
+import "wow.js/css/libs/animate.css"
 
 // import api from './api/api'
 // app.config.globalProperties.$api = api
@@ -27,4 +29,5 @@ app.use(ElementPlus)
 app.use(naive)
 app.use(Vant)
 app.use(Antd)
+app.use(animated)
 app.mount('#app')

@@ -4,7 +4,7 @@
       <img src="../img/linshi/xm1.jpg" alt="" />
     </div>
     <div class="PCCP">
-      <div class="nr" v-for="item in cp" :key="item">
+      <div class="nr wow animate__fadeInUp" v-for="item in cp" :key="item">
         <div class="left">
           <el-image
             :src="item.src"
@@ -29,6 +29,7 @@
 <script  setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
+import WOW from "wow.js";
 
 const cp = ref([]);
 
@@ -36,7 +37,20 @@ const getXmit = async () => {
   const res = await axios.get("/cpHome/getData");
   cp.value = res.data.data.cp;
 };
-onMounted(getXmit);
+onMounted(() => {
+  getXmit();
+  const wow = new WOW({
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 0,
+    mobile: true,
+    live: true,
+    callback: function (box) {},
+    scrollContainer: null,
+    resetAnimation: true,
+  });
+  wow.init();
+});
 </script>
 
 <style lang="less" scoped>
@@ -92,6 +106,12 @@ onMounted(getXmit);
 }
 //PC
 @media screen and (min-width: 801px) {
+
+  .PCCP {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
   .nr {
     width: 100%;
     height: 100%;
@@ -108,6 +128,7 @@ onMounted(getXmit);
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 0.12rem;
       }
     }
     .right {

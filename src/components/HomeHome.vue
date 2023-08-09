@@ -64,10 +64,14 @@
         </div>
 
         <div class="bg">
-          <div class="nr" v-for="(item, index) in it4" :key="index">
+          <div
+            class="nr wow animate__fadeInUp "
+            v-for="(item, index) in it4"
+            :key="index"
+          >
             <div class="dan" v-if="index % 2 === 0">
               <div class="left">
-                <img :src="item.src" alt="" />
+                <img :src="item.src" alt="加载失败" />
               </div>
               <div class="right">
                 <h5>{{ item.h5 }}</h5>
@@ -188,6 +192,7 @@
 <script setup>
 import { getCurrentInstance, ref, onMounted } from "vue";
 import axios from "axios";
+import WOW from "wow.js";
 
 const { proxy } = getCurrentInstance();
 
@@ -212,8 +217,6 @@ const getIt1 = async () => {
   // console.log(res.data.data);
 };
 
-onMounted(getIt1);
-
 const it1 = ref([]);
 
 const it2 = ref([]);
@@ -225,6 +228,21 @@ const it4 = ref([]);
 const it6 = ref([]);
 
 const kh = ref([]);
+
+onMounted(() => {
+  getIt1();
+  const wow = new WOW({
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 0,
+    mobile: true,
+    live: true,
+    callback: function (box) {},
+    scrollContainer: null,
+    resetAnimation: true,
+  });
+  wow.init();
+});
 </script>
 
 

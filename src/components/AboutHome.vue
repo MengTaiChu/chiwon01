@@ -4,7 +4,7 @@
       <img src="../img/linshi/xm1.jpg" alt="" />
     </div>
     <div class="i" v-for="item in aboutData" :key="item">
-      <div class="left">
+      <div class="left lefttwo">
         <h5>{{ item.h5 }}</h5>
         <p v-for="pItem in item.p" :key="pItem">
           {{ pItem }}
@@ -89,6 +89,7 @@ onMounted(getAboutData);
         margin-bottom: 0.3rem;
       }
     }
+
     .right {
       width: 8rem;
       height: 6rem;

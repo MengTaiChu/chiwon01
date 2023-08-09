@@ -138,6 +138,7 @@ const getGy = async () => {
   //   gy.value = res.data.data.gy;
   // }
 
+  //简化
   // const res = await proxy.$api.getHomeFootData();
 
   // gy.value = res.gy;
