@@ -92,8 +92,6 @@ const it = ref("");
 const getXmit = async () => {
   const res = await axios.get("/xmIt/getData");
   xm.value = res.data.data.xm;
-
-  
 };
 
 const dialogVisible = ref(false);
