@@ -4,6 +4,7 @@
 <script setup>
 import Device from "current-device";
 
+//监听窗口变化
 function updateFontSize() {
   const windowWidth = window.innerWidth || document.documentElement.clientWidth;
   const fontSize = Device.mobile() ? 100 : windowWidth * 0.065;
@@ -38,3 +39,6 @@ a {
   padding: 0;
 }
 </style>
+
+
+

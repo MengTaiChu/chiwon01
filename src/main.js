@@ -18,6 +18,7 @@ import animated from "animate.css"
 import 'animate.css';
 import "wow.js/css/libs/animate.css"
 
+
 // import api from './api/api'
 // app.config.globalProperties.$api = api
 

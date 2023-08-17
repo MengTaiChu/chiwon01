@@ -5,7 +5,9 @@
     </div>
     <div class="i" v-for="item in aboutData" :key="item">
       <div class="left lefttwo">
-        <h5>{{ item.h5 }}</h5>
+        <h5 :class="{ animate__heartBeat: isAnimating }" @click="btn">
+          {{ item.h5 }}
+        </h5>
         <p v-for="pItem in item.p" :key="pItem">
           {{ pItem }}
         </p>
@@ -19,7 +21,6 @@
 
 <script setup>
 import axios from "axios";
-
 import { getCurrentInstance, onMounted, ref } from "vue";
 import Device from "current-device";
 
@@ -43,6 +44,13 @@ onMounted(() => {
     about.value = "desktop";
   }
 });
+const isAnimating = ref(false);
+const btn = () => {
+  isAnimating.value = true;
+  setTimeout(() => {
+    isAnimating.value = false;
+  }, 1000);
+};
 </script>
 
 <style lang="less" scoped>
